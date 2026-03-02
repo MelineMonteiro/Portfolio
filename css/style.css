@@ -56,7 +56,9 @@ nav button {
 /* CONTENT */
 .content {
     max-width: 400px;
+    margin-right: 550px;
    /* margin-left: auto;  
+    
     
     text-align: right; 
     display: flex;
