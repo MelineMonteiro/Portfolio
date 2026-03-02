@@ -71,13 +71,13 @@ nav a {
 
 /* LETTRES */
 .rainbow span {
-    color: black;
-    transition: 0.3s;
+    color: black; /* par défaut */
+    transition: color 0.3s;
     display: inline-block;
     cursor: pointer;
 }
 
-/* couleurs au survol lettre par lettre */
+/* au survol de chaque lettre, couleur différente */
 .rainbow span:nth-child(1):hover { color: red; }
 .rainbow span:nth-child(2):hover { color: orange; }
 .rainbow span:nth-child(3):hover { color: yellow; }
@@ -85,9 +85,17 @@ nav a {
 .rainbow span:nth-child(5):hover { color: blue; }
 .rainbow span:nth-child(6):hover { color: indigo; }
 .rainbow span:nth-child(7):hover { color: violet; }
+
+/* répéter le motif pour les lettres suivantes */
 .rainbow span:nth-child(8):hover { color: red; }
 .rainbow span:nth-child(9):hover { color: orange; }
 .rainbow span:nth-child(10):hover { color: yellow; }
+.rainbow span:nth-child(11):hover { color: green; }
+.rainbow span:nth-child(12):hover { color: blue; }
+.rainbow span:nth-child(13):hover { color: indigo; }
+.rainbow span:nth-child(14):hover { color: violet; }
+.rainbow span:nth-child(15):hover { color: red; }
+.rainbow span:nth-child(16):hover { color: orange; }
 
 /* TEXTE */
 .content p {
