@@ -29,14 +29,6 @@ nav a {
     color: #333;
 }
 
-nav button {
-    background: #5a3e1b;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 20px;
-}
-
 /* HERO */
 .hero {
     display: flex; 
@@ -46,9 +38,7 @@ nav button {
     min-height: 80vh;
 }
 
-/* IMAGE */
 .image img {
-    margin-left: 200px;
     width: 300px;
     border-radius: 50%;
     border: 5px solid #d1bfa3;
@@ -57,29 +47,24 @@ nav button {
 /* CONTENT */
 .content {
     max-width: 400px;
-    margin-right: 200px; /* ajuste pour rapprocher du centre */
     text-align: right; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* centre verticalement */
 }
 
-/* TITRE ARC-EN-CIEL */
+/* TITRE */
 .content h1 {
     font-size: clamp(2rem, 4vw, 6rem);
     font-weight: bold;
-    line-height: 1.2; /* espace entre Méline et Monteiro */
 }
 
-/* chaque lettre noire par défaut */
+/* LETTRES */
 .rainbow span {
     color: black;
-    transition: color 0.3s;
+    transition: 0.3s;
     display: inline-block;
     cursor: pointer;
 }
 
-/* couleurs arc-en-ciel au survol d'une lettre */
+/* couleurs au survol lettre par lettre */
 .rainbow span:nth-child(1):hover { color: red; }
 .rainbow span:nth-child(2):hover { color: orange; }
 .rainbow span:nth-child(3):hover { color: yellow; }
@@ -90,12 +75,6 @@ nav button {
 .rainbow span:nth-child(8):hover { color: red; }
 .rainbow span:nth-child(9):hover { color: orange; }
 .rainbow span:nth-child(10):hover { color: yellow; }
-.rainbow span:nth-child(11):hover { color: green; }
-.rainbow span:nth-child(12):hover { color: blue; }
-.rainbow span:nth-child(13):hover { color: indigo; }
-.rainbow span:nth-child(14):hover { color: violet; }
-.rainbow span:nth-child(15):hover { color: red; }
-.rainbow span:nth-child(16):hover { color: orange; }
 
 /* TEXTE */
 .content p {
@@ -122,27 +101,40 @@ nav button {
     padding: 80px 100px;
 }
 
+/* TITRE SECTION */
 .projects h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 50px;
 }
 
-/* BOX PROJET */
+/* RECTANGLES PROJETS */
 .project-card {
     display: flex;
     align-items: center;
-    background: #f5f5f5;
-    margin-bottom: 40px;
-    border-radius: 15px;
-    padding: 20px;
+    background: #ffffff;
+
+    width: 70%; /* plus petit */
+    margin: 0 auto 40px auto; /* centré */
+
+    border: 1.5px solid black; /* cadre fin */
+    border-radius: 10px;
+
+    padding: 15px;
+
+    transition: 0.3s;
+}
+
+/* effet au survol */
+.project-card:hover {
+    transform: translateY(-5px);
 }
 
 /* IMAGE */
 .project-card img {
-    width: 250px;
-    border-radius: 10px;
-    margin-right: 30px;
+    width: 180px;
+    border-radius: 8px;
+    margin-right: 20px;
 }
 
 /* TEXTE */
