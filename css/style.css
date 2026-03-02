@@ -56,13 +56,13 @@ nav button {
 /* CONTENT */
 .content {
     max-width: 400px;
-    margin-left: auto;  
-    margin-right: 1150px; 
+   /* margin-left: auto;  
+    
     text-align: right; 
     display: flex;
     flex-direction: column;
     justify-content: center; /* centre le texte verticalement à l'intérieur du content */
-    /*height: 100%; /* prend toute la hauteur de la section hero */ 
+    
 }
 
 .content h1 {
