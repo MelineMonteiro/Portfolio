@@ -58,7 +58,7 @@ nav button {
 }
 
 .content h1 {
-    font-size: 50px;
+    font-size: clamp(1rem,2rem + 5vw,3rem);
 }
 
 .content h1 span {
