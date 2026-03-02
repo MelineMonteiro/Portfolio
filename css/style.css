@@ -48,7 +48,7 @@ nav button {
 
 /* IMAGE */
 .image img {
-    margin-left: 500px;
+   
     width: 300px;
     border-radius: 50%;
     border: 5px solid #d1bfa3;
@@ -57,7 +57,7 @@ nav button {
 /* CONTENT */
 .content {
     max-width: 400px;
-    margin-right: 500px; /* ajuste pour rapprocher du centre */
+    margin-right: 200px; /* ajuste pour rapprocher du centre */
     text-align: right; 
     display: flex;
     flex-direction: column;
