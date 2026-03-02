@@ -71,28 +71,27 @@ nav button {
 
 /* chaque lettre noire par défaut */
 .rainbow span {
-    color: black;
-    transition: color 0.3s; /* animation douce au survol */
+    color: black; /* couleur par défaut */
+    transition: color 0.3s; /* pour un effet fluide */
     display: inline-block;
+    cursor: pointer;
 }
 
-/* couleurs arc-en-ciel au survol */
-.rainbow:hover span:nth-child(1) { color: red; }
-.rainbow:hover span:nth-child(2) { color: orange; }
-.rainbow:hover span:nth-child(3) { color: yellow; }
-.rainbow:hover span:nth-child(4) { color: green; }
-.rainbow:hover span:nth-child(5) { color: blue; }
-.rainbow:hover span:nth-child(6) { color: indigo; }
-.rainbow:hover span:nth-child(7) { color: violet; }
-.rainbow:hover span:nth-child(8) { color: red; }
-.rainbow:hover span:nth-child(9) { color: orange; }
-.rainbow:hover span:nth-child(10) { color: yellow; }
-.rainbow:hover span:nth-child(11) { color: green; }
-.rainbow:hover span:nth-child(12) { color: blue; }
-.rainbow:hover span:nth-child(13) { color: indigo; }
-.rainbow:hover span:nth-child(14) { color: violet; }
-.rainbow:hover span:nth-child(15) { color: red; }
-.rainbow:hover span:nth-child(16) { color: orange; }
+/* au survol d’une lettre, elle change de couleur */
+.rainbow span:hover {
+    color: red; /* couleur par défaut au survol */
+}
+
+/* Option : plusieurs couleurs arc-en-ciel alternées */
+.rainbow span:nth-child(1):hover { color: red; }
+.rainbow span:nth-child(2):hover { color: orange; }
+.rainbow span:nth-child(3):hover { color: yellow; }
+.rainbow span:nth-child(4):hover { color: green; }
+.rainbow span:nth-child(5):hover { color: blue; }
+.rainbow span:nth-child(6):hover { color: indigo; }
+.rainbow span:nth-child(7):hover { color: violet; }
+.rainbow span:nth-child(8):hover { color: red; }
+/* ... continue si le texte est plus long */
 
 /* TEXTE */
 .content p {
