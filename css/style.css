@@ -39,8 +39,8 @@ nav button {
 
 /* HERO */
 .hero {
-    display: flex;
-    align-items: center;
+      display: flex;
+    align-items: center; /* centre verticalement les enfants */
     justify-content: space-between; 
     padding: 50px 100px;
     min-height: 80vh;
@@ -55,9 +55,13 @@ nav button {
 
 /* CONTENT */
 .content {
-     max-width: 400px;
+      max-width: 400px;
     margin-left: auto;  
     text-align: right; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centre le texte verticalement à l'intérieur du content */
+    height: 100%; /* prend toute la hauteur de la section hero */ 
 }
 
 .content h1 {
