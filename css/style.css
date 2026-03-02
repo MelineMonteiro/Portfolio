@@ -48,7 +48,7 @@ nav button {
 
 /* IMAGE */
 .image img {
-   
+    margin-left: 200px;
     width: 300px;
     border-radius: 50%;
     border: 5px solid #d1bfa3;
