@@ -70,32 +70,33 @@ nav a {
 }
 
 /* LETTRES */
+
 .rainbow span {
-    color: black; /* par défaut */
-    transition: color 0.3s;
+    color: black;
+    transition: color 0.3s, transform 0.2s;
     display: inline-block;
     cursor: pointer;
 }
 
-/* au survol de chaque lettre, couleur différente */
-.rainbow span:nth-child(1):hover { color: red; }
-.rainbow span:nth-child(2):hover { color: orange; }
-.rainbow span:nth-child(3):hover { color: yellow; }
-.rainbow span:nth-child(4):hover { color: green; }
-.rainbow span:nth-child(5):hover { color: blue; }
-.rainbow span:nth-child(6):hover { color: indigo; }
-.rainbow span:nth-child(7):hover { color: violet; }
+/* effet vague + couleur */
+.rainbow span:nth-child(1):hover { color: red; animation: wave 0.4s ease; }
+.rainbow span:nth-child(2):hover { color: orange; animation: wave 0.4s ease; }
+.rainbow span:nth-child(3):hover { color: yellow; animation: wave 0.4s ease; }
+.rainbow span:nth-child(4):hover { color: green; animation: wave 0.4s ease; }
+.rainbow span:nth-child(5):hover { color: blue; animation: wave 0.4s ease; }
+.rainbow span:nth-child(6):hover { color: indigo; animation: wave 0.4s ease; }
+.rainbow span:nth-child(7):hover { color: violet; animation: wave 0.4s ease; }
 
-/* répéter le motif pour les lettres suivantes */
-.rainbow span:nth-child(8):hover { color: red; }
-.rainbow span:nth-child(9):hover { color: orange; }
-.rainbow span:nth-child(10):hover { color: yellow; }
-.rainbow span:nth-child(11):hover { color: green; }
-.rainbow span:nth-child(12):hover { color: blue; }
-.rainbow span:nth-child(13):hover { color: indigo; }
-.rainbow span:nth-child(14):hover { color: violet; }
-.rainbow span:nth-child(15):hover { color: red; }
-.rainbow span:nth-child(16):hover { color: orange; }
+/* répétition */
+.rainbow span:nth-child(8):hover { color: red; animation: wave 0.4s ease; }
+.rainbow span:nth-child(9):hover { color: orange; animation: wave 0.4s ease; }
+.rainbow span:nth-child(10):hover { color: yellow; animation: wave 0.4s ease; }
+.rainbow span:nth-child(11):hover { color: green; animation: wave 0.4s ease; }
+.rainbow span:nth-child(12):hover { color: blue; animation: wave 0.4s ease; }
+.rainbow span:nth-child(13):hover { color: indigo; animation: wave 0.4s ease; }
+.rainbow span:nth-child(14):hover { color: violet; animation: wave 0.4s ease; }
+.rainbow span:nth-child(15):hover { color: red; animation: wave 0.4s ease; }
+.rainbow span:nth-child(16):hover { color: orange; animation: wave 0.4s ease; }
 
 /* TEXTE */
 .content p {
@@ -282,4 +283,10 @@ nav a {
     color: #555;
     font-size: 1.1rem;
     line-height: 1.6;
+}
+
+@keyframes wave {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
 }
