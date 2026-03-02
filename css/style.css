@@ -41,8 +41,9 @@ nav button {
 .hero {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 50px;
+    justify-content: space-between; 
+    padding: 50px 100px;
+    min-height: 80vh;
 }
 
 /* IMAGE */
@@ -54,11 +55,14 @@ nav button {
 
 /* CONTENT */
 .content {
-    max-width: 400px;
+     max-width: 400px;
+    margin-left: auto;  
+    text-align: right; 
 }
 
 .content h1 {
-    font-size: clamp(1rem,2rem + 5vw,3rem);
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: bold;
 }
 
 .content h1 span {
@@ -76,6 +80,7 @@ nav button {
 .content p {
     margin: 15px 0;
     color: #555;
+    font-size: 1.2rem;
 }
 
 .cv {
