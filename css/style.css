@@ -238,3 +238,39 @@ nav a {
 .grid-card:hover {
     transform: translateY(-5px);
 }
+
+/* ===================== */
+/* A PROPOS */
+/* ===================== */
+
+.about {
+    padding: 80px 100px;
+}
+
+/* TITRE */
+.about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* ENCADRÉ */
+.about-box {
+    width: 60%;
+    margin: 0 auto;
+
+    border: 1.5px solid black;
+    border-radius: 10px;
+
+    padding: 30px;
+    background: #ffffff;
+
+    text-align: center;
+}
+
+/* TEXTE */
+.about-box p {
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
