@@ -44,6 +44,7 @@ nav button {
     justify-content: space-between; 
     padding: 50px 100px; 
     min-height: 80vh;
+    margin-left: 250px;
 }
 
 /* IMAGE */
@@ -56,7 +57,7 @@ nav button {
 /* CONTENT */
 .content {
     max-width: 400px;
-    margin-right: 50px;
+    margin-right: 150px;
    /* margin-left: auto;  
     
     
