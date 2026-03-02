@@ -39,10 +39,10 @@ nav button {
 
 /* HERO */
 .hero {
-    display: flex;
-    align-items: center; /* centre verticalement les enfants */
+    display: flex; 
+    align-items: center; 
     justify-content: space-between; 
-    padding: 50px 100px;
+    padding: 50px 100px; 
     min-height: 80vh;
 }
 
