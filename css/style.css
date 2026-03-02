@@ -114,13 +114,14 @@ nav a {
     align-items: center;
     background: #ffffff;
 
-    width: 70%; /* plus petit */
-    margin: 0 auto 40px auto; /* centré */
+    width: 60%; /* moins large */
+    margin: 0 auto 40px auto;
 
-    border: 1.5px solid black; /* cadre fin */
+    border: 1.5px solid black;
     border-radius: 10px;
 
-    padding: 15px;
+    padding: 25px; /* plus d’espace dedans → plus haut */
+    min-height: 220px; /* force une hauteur plus grande */
 
     transition: 0.3s;
 }
@@ -132,9 +133,11 @@ nav a {
 
 /* IMAGE */
 .project-card img {
-    width: 180px;
+    width: 160px;
+    height: 160px; /* donne une hauteur fixe */
+    object-fit: cover; /* évite les déformations */
     border-radius: 8px;
-    margin-right: 20px;
+    margin-right: 25px;
 }
 
 /* TEXTE */
