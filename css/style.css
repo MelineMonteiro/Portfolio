@@ -44,7 +44,6 @@ nav button {
     justify-content: space-between; 
     padding: 50px 100px; 
     min-height: 80vh;
-    margin-left: 250px !important;
 }
 
 /* IMAGE */
@@ -57,22 +56,19 @@ nav button {
 /* CONTENT */
 .content {
     max-width: 400px;
-    margin-right: 180px !important;
-   /* margin-left: auto;  
-    
-    
+    margin-right: 100px; /* ajuste pour rapprocher du centre */
     text-align: right; 
     display: flex;
     flex-direction: column;
-    justify-content: center; /* centre le texte verticalement à l'intérieur du content */
-    
+    justify-content: center; /* centre verticalement */
 }
 
+/* TITRE ARC-EN-CIEL */
 .content h1 {
-    font-size: clamp(2rem, 4vw, 20rem);
+    font-size: clamp(2rem, 4vw, 6rem);
     font-weight: bold;
+    line-height: 1.2; /* espace entre Méline et Monteiro */
 }
-
 
 /* chaque lettre noire par défaut */
 .rainbow span {
@@ -100,25 +96,14 @@ nav button {
 .rainbow span:nth-child(15):hover { color: red; }
 .rainbow span:nth-child(16):hover { color: orange; }
 
-
-.content h1 span {
-    color: #000000;
-}
-
-.content h3 {
-    margin: 10px 0;
-}
-
-.highlight {
-    color: #5a3e1b;
-}
-
+/* TEXTE */
 .content p {
     margin: 15px 0;
     color: #555;
     font-size: 1.2rem;
 }
 
+/* BOUTON CV */
 .cv {
     background: #5a3e1b;
     color: white;
