@@ -62,7 +62,7 @@ nav button {
     display: flex;
     flex-direction: column;
     justify-content: center; /* centre le texte verticalement à l'intérieur du content */
-    height: 100%; /* prend toute la hauteur de la section hero */ 
+    /*height: 100%; /* prend toute la hauteur de la section hero */ 
 }
 
 .content h1 {
