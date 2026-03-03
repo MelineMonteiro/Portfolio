@@ -1,128 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Méline Monteiro</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
 <header>
-    <h2 class="logo">Méline Monteiro</h2>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">Projets</a>
-        <a href="#">A propos</a>
-        <a href="#">Me Contacter</a>
+    <div class="logo">Méline</div>
+    <nav class="nav-menu">
+        <a href="#home">Accueil</a>
+        <a href="#projects">Projets</a>
+        <a href="#about">À propos</a>
+        <a href="#contact">Contact</a>
     </nav>
+    <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </header>
 
 <!-- HERO -->
-<section class="hero">
-    <div class="image">
-        <img src="https://via.placeholder.com/300" alt="profile">
-    </div>
+<section id="home" class="hero">
+    <div class="hero-content">
+        <div class="profile-image">
+            <img src="https://via.placeholder.com/350" alt="Méline Monteiro">
+        </div>
 
-    <div class="content">
-        <h1 class="rainbow">
-    <span>M</span><span>é</span><span>l</span><span>i</span><span>n</span><span>e</span>
-    <span> </span>
-    <span>M</span><span>o</span><span>n</span><span>t</span><span>e</span><span>i</span><span>r</span><span>o</span>
-</h1>
-
-        <p>Game Designer et UI/UX Designer</p>
-
-        <button class="cv">Download CV</button>
+        <div class="hero-text">
+            <h1 class="rainbow">
+                <span>M</span><span>é</span><span>l</span><span>i</span><span>n</span><span>e</span>
+            </h1>
+            <h2>Monteiro</h2>
+            <p class="subtitle">Game Designer & UI/UX Designer</p>
+            <p class="description">Créant des expériences immersives et intuitives pour vos projets</p>
+            
+            <div class="hero-buttons">
+                <button class="btn btn-primary">Télécharger CV</button>
+                <button class="btn btn-secondary">Mes projets</button>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- PROJETS -->
-<section class="projects">
-    <h2>Mes Projets</h2>
+<!-- PROJETS EN AVANT -->
+<section id="projects" class="projects-featured">
+    <div class="container">
+        <h2 class="section-title">Projets en Avant</h2>
+        
+        <div class="featured-projects">
+            <div class="project-card featured">
+                <img src="https://via.placeholder.com/400x300" alt="projet">
+                <div class="project-info">
+                    <h3>Projet 1</h3>
+                    <p>Description du projet. Explique ce que tu as réalisé, les outils utilisés et le but.</p>
+                    <a href="#" class="project-btn">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
 
-    <div class="project-card">
-        <img src="https://via.placeholder.com/250" alt="projet1">
-
-        <div class="project-content">
-            <h3>Projet 1</h3>
-            <p>
-                Description du projet. Explique ce que tu as réalisé,
-                les outils utilisés et le but.
-            </p>
-            <a href="#" class="project-btn">Voir le projet</a>
+            <div class="project-card featured">
+                <img src="https://via.placeholder.com/400x300" alt="projet">
+                <div class="project-info">
+                    <h3>Projet 2</h3>
+                    <p>Description du projet. Explique ce que tu as réalisé, les outils utilisés et le but.</p>
+                    <a href="#" class="project-btn">Voir le projet <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
         </div>
     </div>
+</section>
 
-    <div class="project-card">
-        <img src="https://via.placeholder.com/250" alt="projet2">
+<!-- GRID AUTRES PROJETS -->
+<section class="projects-grid">
+    <div class="container">
+        <h2 class="section-title">Autres Projets</h2>
 
-        <div class="project-content">
-            <h3>Projet 2</h3>
-            <p>
-                Description du projet. Explique ce que tu as réalisé,
-                les outils utilisés et le but.
-            </p>
-            <a href="#" class="project-btn">Voir le projet</a>
+        <div class="grid-container">
+            <div class="grid-card">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/300x250" alt="projet">
+                    <div class="card-overlay">
+                        <a href="#" class="card-link">Voir plus</a>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Projet 3</h3>
+                    <p>Petite description du projet.</p>
+                </div>
+            </div>
+
+            <div class="grid-card">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/300x250" alt="projet">
+                    <div class="card-overlay">
+                        <a href="#" class="card-link">Voir plus</a>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Projet 4</h3>
+                    <p>Petite description du projet.</p>
+                </div>
+            </div>
+
+            <div class="grid-card">
+                <div class="card-image">
+                    <img src="https://via.placeholder.com/300x250" alt="projet">
+                    <div class="card-overlay">
+                        <a href="#" class="card-link">Voir plus</a>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Projet 5</h3>
+                    <p>Petite description du projet.</p>
+                </div>
+            </div>
         </div>
     </div>
-
 </section>
 
-    <section class="projects-grid">
+<!-- À PROPOS -->
+<section id="about" class="about">
+    <div class="container">
+        <h2 class="section-title">À Propos de Moi</h2>
 
-    <h2>Autres Projets</h2>
-
-    <div class="grid-container">
-
-        <div class="grid-card">
-            <img src="https://via.placeholder.com/300" alt="projet">
-            <h3>Projet 3</h3>
-            <p>Petite description du projet.</p>
-            <a href="#" class="project-btn">Voir le projet</a>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Je suis passionnée par le game design et le UI/UX design. J'aime créer des expériences immersives et intuitives. Mon objectif est de concevoir des interfaces à la fois esthétiques et fonctionnelles.</p>
+                <div class="skills">
+                    <span class="skill-tag">Game Design</span>
+                    <span class="skill-tag">UI/UX Design</span>
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Unreal Engine</span>
+                </div>
+            </div>
         </div>
-
-        <div class="grid-card">
-            <img src="https://via.placeholder.com/300" alt="projet">
-            <h3>Projet 4</h3>
-            <p>Petite description du projet.</p>
-            <a href="#" class="project-btn">Voir le projet</a>
-        </div>
-
-        <div class="grid-card">
-            <img src="https://via.placeholder.com/300" alt="projet">
-            <h3>Projet 5</h3>
-            <p>Petite description du projet.</p>
-            <a href="#" class="project-btn">Voir le projet</a>
-        </div>
-
     </div>
-
 </section>
 
-    <section class="about">
-
-    <h2>A propos de moi</h2>
-
-    <div class="about-box">
-        <p>
-            Je suis passionnée par le game design et le UI/UX design.
-            J’aime créer des expériences immersives et intuitives.
-            Mon objectif est de concevoir des interfaces à la fois
-            esthétiques et fonctionnelles.
-        </p>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">Me Contacter</h2>
+        
+        <div class="contact-content">
+            <a href="mailto:meline@email.com" class="contact-link">
+                <i class="fas fa-envelope"></i>
+                <span>meline@email.com</span>
+            </a>
+            <a href="https://linkedin.com/in/meline" target="_blank" class="contact-link">
+                <i class="fas fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://meline.itch.io" target="_blank" class="contact-link">
+                <i class="fas fa-gamepad"></i>
+                <span>itch.io</span>
+            </a>
+        </div>
     </div>
-
 </section>
 
-    <!-- CONTACT -->
-<section class="contact">
-    <p> meline@email.com</p>
-    <p> linkedin.com/in/meline</p>
-    <p> meline.itch.io</p>
-</section>
+<footer>
+    <p>&copy; 2026 Méline Monteiro. Tous droits réservés.</p>
+</footer>
 
-</body>
-</html>
+<script src="js/script.js"></script>
 </body>
 </html>
