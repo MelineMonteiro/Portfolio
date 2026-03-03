@@ -148,15 +148,8 @@ header {
     font-size: clamp(2.5rem, 8vw, 4.5rem);
     font-weight: 800;
     line-height: 1.1;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     letter-spacing: -1px;
-}
-
-.hero-text h2 {
-    font-size: clamp(1.5rem, 5vw, 3rem);
-    font-weight: 600;
-    color: var(--text-light);
-    margin-bottom: 15px;
 }
 
 .subtitle {
@@ -177,6 +170,85 @@ header {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+}
+
+/* ===================== */
+/* RAINBOW NAME EFFECT (COOLORS STYLE) */
+/* ===================== */
+
+.rainbow-name {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+.rainbow-name span {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    cursor: pointer;
+    animation: rainbow-cycle 6s infinite;
+}
+
+.rainbow-name span.space {
+    animation: none;
+}
+
+/* Couleurs rainbow séquentielles */
+.rainbow-name span:nth-child(1) { animation-delay: 0s; }
+.rainbow-name span:nth-child(2) { animation-delay: 0.3s; }
+.rainbow-name span:nth-child(3) { animation-delay: 0.6s; }
+.rainbow-name span:nth-child(4) { animation-delay: 0.9s; }
+.rainbow-name span:nth-child(5) { animation-delay: 1.2s; }
+.rainbow-name span:nth-child(6) { animation-delay: 1.5s; }
+.rainbow-name span:nth-child(8) { animation-delay: 1.8s; }
+.rainbow-name span:nth-child(9) { animation-delay: 2.1s; }
+.rainbow-name span:nth-child(10) { animation-delay: 2.4s; }
+.rainbow-name span:nth-child(11) { animation-delay: 2.7s; }
+.rainbow-name span:nth-child(12) { animation-delay: 3s; }
+.rainbow-name span:nth-child(13) { animation-delay: 3.3s; }
+.rainbow-name span:nth-child(14) { animation-delay: 3.6s; }
+.rainbow-name span:nth-child(15) { animation-delay: 3.9s; }
+
+@keyframes rainbow-cycle {
+    0% {
+        color: #ff0000;
+        transform: translateY(0);
+    }
+    12.5% {
+        color: #ff7f00;
+        transform: translateY(-10px);
+    }
+    25% {
+        color: #ffff00;
+        transform: translateY(0);
+    }
+    37.5% {
+        color: #00ff00;
+        transform: translateY(-10px);
+    }
+    50% {
+        color: #0000ff;
+        transform: translateY(0);
+    }
+    62.5% {
+        color: #4b0082;
+        transform: translateY(-10px);
+    }
+    75% {
+        color: #9400d3;
+        transform: translateY(0);
+    }
+    87.5% {
+        color: #ff0000;
+        transform: translateY(-10px);
+    }
+    100% {
+        color: #ff0000;
+        transform: translateY(0);
+    }
 }
 
 /* ===================== */
@@ -221,30 +293,6 @@ header {
 }
 
 /* ===================== */
-/* RAINBOW EFFECT */
-/* ===================== */
-
-.rainbow span {
-    color: var(--text-dark);
-    transition: color 0.3s, transform 0.2s;
-    display: inline-block;
-    cursor: pointer;
-}
-
-.rainbow span:nth-child(1):hover { color: #ff0000; animation: wave 0.4s ease; }
-.rainbow span:nth-child(2):hover { color: #ff7f00; animation: wave 0.4s ease; }
-.rainbow span:nth-child(3):hover { color: #ffff00; animation: wave 0.4s ease; }
-.rainbow span:nth-child(4):hover { color: #00ff00; animation: wave 0.4s ease; }
-.rainbow span:nth-child(5):hover { color: #0000ff; animation: wave 0.4s ease; }
-.rainbow span:nth-child(6):hover { color: #4b0082; animation: wave 0.4s ease; }
-
-@keyframes wave {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
-/* ===================== */
 /* SECTIONS */
 /* ===================== */
 
@@ -264,7 +312,7 @@ section {
 }
 
 /* ===================== */
-/* PROJETS EN AVANT */
+/* PROJETS */
 /* ===================== */
 
 .projects-featured {
@@ -272,9 +320,11 @@ section {
 }
 
 .featured-projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .project-card.featured {
@@ -283,6 +333,9 @@ section {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: var(--transition);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
 
 .project-card.featured:hover {
@@ -292,25 +345,26 @@ section {
 
 .project-card.featured img {
     width: 100%;
-    height: 250px;
+    height: 300px;
     object-fit: cover;
     display: block;
 }
 
 .project-info {
-    padding: 30px;
+    padding: 40px;
 }
 
 .project-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 12px;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
     color: var(--text-dark);
 }
 
 .project-info p {
     color: var(--text-light);
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     line-height: 1.6;
+    font-size: 1.05rem;
 }
 
 .project-btn {
@@ -329,7 +383,7 @@ section {
 }
 
 /* ===================== */
-/* GRID PROJETS */
+/* PROJETS ANNEXE */
 /* ===================== */
 
 .projects-grid {
@@ -517,6 +571,16 @@ footer {
 /* RESPONSIVITÉ */
 /* ===================== */
 
+@media (max-width: 900px) {
+    .project-card.featured {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card.featured img {
+        height: 250px;
+    }
+}
+
 @media (max-width: 768px) {
     header {
         padding: 15px 20px;
@@ -570,14 +634,18 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .featured-projects {
-        grid-template-columns: 1fr;
-    }
-
     .contact-content {
         gap: 20px;
         flex-direction: column;
         align-items: center;
+    }
+
+    .project-info {
+        padding: 25px;
+    }
+
+    .project-info h3 {
+        font-size: 1.5rem;
     }
 }
 
@@ -592,10 +660,7 @@ footer {
 
     .hero-text h1 {
         font-size: 2rem;
-    }
-
-    .hero-text h2 {
-        font-size: 1.2rem;
+        margin-bottom: 15px;
     }
 
     .subtitle {
@@ -618,5 +683,17 @@ footer {
     .skill-tag {
         padding: 8px 14px;
         font-size: 0.9rem;
+    }
+
+    .project-info {
+        padding: 20px;
+    }
+
+    .project-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-info p {
+        font-size: 0.95rem;
     }
 }
