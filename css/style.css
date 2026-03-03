@@ -150,6 +150,7 @@ header {
     line-height: 1.1;
     margin-bottom: 20px;
     letter-spacing: -1px;
+    white-space: nowrap;
 }
 
 .subtitle {
@@ -177,10 +178,11 @@ header {
 /* ===================== */
 
 .rainbow-name {
-    display: inline;
+    display: inline-block;
     font-size: clamp(2.5rem, 8vw, 4.5rem);
     font-weight: 800;
     letter-spacing: -1px;
+    white-space: nowrap;
 }
 
 .rainbow-name span {
@@ -190,15 +192,11 @@ header {
     cursor: pointer;
 }
 
-.rainbow-name span.space {
-    margin: 0 5px;
-}
-
-/* Couleurs rainbow au survol */
-.rainbow-name span:hover {
+.rainbow-name span:not(:nth-child(7)):hover {
     animation: wave-up 0.5s ease;
 }
 
+/* Couleurs rainbow au survol */
 .rainbow-name span:nth-child(1):hover { color: #ff0000; }
 .rainbow-name span:nth-child(2):hover { color: #ff7f00; }
 .rainbow-name span:nth-child(3):hover { color: #ffff00; }
@@ -535,6 +533,16 @@ footer {
 /* RESPONSIVITÉ */
 /* ===================== */
 
+@media (max-width: 1200px) {
+    .hero-text h1 {
+        white-space: normal;
+    }
+
+    .rainbow-name {
+        white-space: normal;
+    }
+}
+
 @media (max-width: 900px) {
     .project-card.featured {
         flex-direction: column;
@@ -615,6 +623,14 @@ footer {
     .about-text {
         padding: 30px;
     }
+
+    .hero-text h1 {
+        white-space: normal;
+    }
+
+    .rainbow-name {
+        white-space: normal;
+    }
 }
 
 @media (max-width: 480px) {
@@ -629,6 +645,11 @@ footer {
     .hero-text h1 {
         font-size: 2rem;
         margin-bottom: 15px;
+        white-space: normal;
+    }
+
+    .rainbow-name {
+        white-space: normal;
     }
 
     .subtitle {
