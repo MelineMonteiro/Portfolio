@@ -374,7 +374,7 @@ section {
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    height: 450px;
+    height: 250px;
     border: 1px solid rgba(99, 102, 241, 0.1);
 }
 
@@ -384,7 +384,7 @@ section {
 }
 
 .project-image-wrapper {
-    width: 50%;
+    width: 60%;
     height: 100%;
     position: relative;
     overflow: hidden;
@@ -395,9 +395,9 @@ section {
 }
 
 .project-card.featured img {
-    width: auto;
+    width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     display: block;
     transition: var(--transition);
 }
@@ -422,8 +422,8 @@ section {
 }
 
 .project-info {
-    padding: 40px;
-    width: 50%;
+    padding: 30px;
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -431,29 +431,20 @@ section {
 }
 
 .project-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #6366f1, #ec4899);
-    color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    width: fit-content;
-    margin-bottom: 15px;
+    display: none;
 }
 
 .project-info h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
     color: var(--text-dark);
 }
 
 .project-info p {
     color: var(--text-light);
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     line-height: 1.6;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .project-btn {
@@ -635,8 +626,9 @@ section {
 
 .contact-content {
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 80px;
     flex-wrap: wrap;
     position: relative;
     z-index: 1;
@@ -711,16 +703,16 @@ footer {
 
     .project-image-wrapper {
         width: 100%;
-        height: 350px;
+        height: 250px;
     }
 
     .project-info {
         width: 100%;
-        padding: 30px;
+        padding: 25px;
     }
 
     .contact-content {
-        gap: 30px;
+        gap: 40px;
     }
 }
 
@@ -779,7 +771,7 @@ footer {
     }
 
     .contact-content {
-        gap: 20px;
+        gap: 30px;
         flex-direction: column;
         align-items: center;
     }
@@ -835,7 +827,7 @@ footer {
 
     .project-image-wrapper {
         width: 100%;
-        height: 250px;
+        height: 200px;
     }
 
     .project-info {
@@ -863,5 +855,9 @@ footer {
         width: 50px;
         height: 50px;
         font-size: 1.2rem;
+    }
+
+    .contact-content {
+        gap: 20px;
     }
 }
