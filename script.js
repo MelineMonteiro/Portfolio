@@ -26,3 +26,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Effet Coolors vague au survol du nom
+const rainbowSpans = document.querySelectorAll('.rainbow-name span:not(.space)');
+
+rainbowSpans.forEach((span, index) => {
+    span.addEventListener('mouseenter', function () {
+        // Créer l'effet vague en cascade
+        rainbowSpans.forEach((s, i) => {
+            const delay = Math.abs(i - index) * 50;
+            setTimeout(() => {
+                s.style.animation = 'wave-up 0.5s ease';
+                s.style.animationDelay = '0s';
+                // Reset après animation
+                setTimeout(() => {
+                    s.style.animation = 'none';
+                }, 500);
+            }, delay);
+        });
+    });
+});
