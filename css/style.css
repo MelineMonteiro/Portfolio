@@ -173,7 +173,7 @@ header {
 }
 
 /* ===================== */
-/* RAINBOW NAME EFFECT - COOLORS STYLE */
+/* RAINBOW NAME EFFECT - COOLORS HOVER */
 /* ===================== */
 
 .rainbow-name {
@@ -184,50 +184,45 @@ header {
 }
 
 .rainbow-name span {
-    background: linear-gradient(90deg, 
-        #ff0000 0%, 
-        #ff7f00 14.28%, 
-        #ffff00 28.56%, 
-        #00ff00 42.84%, 
-        #0000ff 57.12%, 
-        #4b0082 71.4%, 
-        #9400d3 85.68%, 
-        #ff0000 100%);
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: coolors-slide 8s linear infinite;
+    color: var(--text-dark);
+    transition: color 0.3s ease, transform 0.3s ease;
     display: inline-block;
+    cursor: pointer;
 }
 
 .rainbow-name span.space {
-    animation: none;
-    background: none;
-    -webkit-text-fill-color: unset;
+    margin: 0 5px;
 }
 
-.rainbow-name span:nth-child(1) { animation-delay: 0s; }
-.rainbow-name span:nth-child(2) { animation-delay: -0.3s; }
-.rainbow-name span:nth-child(3) { animation-delay: -0.6s; }
-.rainbow-name span:nth-child(4) { animation-delay: -0.9s; }
-.rainbow-name span:nth-child(5) { animation-delay: -1.2s; }
-.rainbow-name span:nth-child(6) { animation-delay: -1.5s; }
-.rainbow-name span:nth-child(8) { animation-delay: -1.8s; }
-.rainbow-name span:nth-child(9) { animation-delay: -2.1s; }
-.rainbow-name span:nth-child(10) { animation-delay: -2.4s; }
-.rainbow-name span:nth-child(11) { animation-delay: -2.7s; }
-.rainbow-name span:nth-child(12) { animation-delay: -3s; }
-.rainbow-name span:nth-child(13) { animation-delay: -3.3s; }
-.rainbow-name span:nth-child(14) { animation-delay: -3.6s; }
-.rainbow-name span:nth-child(15) { animation-delay: -3.9s; }
+/* Couleurs rainbow au survol */
+.rainbow-name span:hover {
+    animation: wave-up 0.5s ease;
+}
 
-@keyframes coolors-slide {
+.rainbow-name span:nth-child(1):hover { color: #ff0000; }
+.rainbow-name span:nth-child(2):hover { color: #ff7f00; }
+.rainbow-name span:nth-child(3):hover { color: #ffff00; }
+.rainbow-name span:nth-child(4):hover { color: #00ff00; }
+.rainbow-name span:nth-child(5):hover { color: #0000ff; }
+.rainbow-name span:nth-child(6):hover { color: #4b0082; }
+.rainbow-name span:nth-child(8):hover { color: #ff0000; }
+.rainbow-name span:nth-child(9):hover { color: #ff7f00; }
+.rainbow-name span:nth-child(10):hover { color: #ffff00; }
+.rainbow-name span:nth-child(11):hover { color: #00ff00; }
+.rainbow-name span:nth-child(12):hover { color: #0000ff; }
+.rainbow-name span:nth-child(13):hover { color: #4b0082; }
+.rainbow-name span:nth-child(14):hover { color: #9400d3; }
+.rainbow-name span:nth-child(15):hover { color: #ff0000; }
+
+@keyframes wave-up {
     0% {
-        background-position: 0% 0%;
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
     }
     100% {
-        background-position: 200% 0%;
+        transform: translateY(0);
     }
 }
 
