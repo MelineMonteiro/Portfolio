@@ -498,8 +498,8 @@ section {
     /* quadrillage blanc sur fond noir */
 background-color: black; /* fond noir */
 background-image:
-  linear-gradient(to right, rgba(255,255,255,0.8) 0.3px, transparent 1px),
-    linear-gradient(to bottom, rgba(255,255,255,0.8) 0.3px, transparent 1px);
+  linear-gradient(to right, rgba(255,255,255,0.8) 0.2px, transparent 0.3px),
+    linear-gradient(to bottom, rgba(255,255,255,0.8) 0.2px, transparent 0.3px);
 
 background-size: 25px 25px;
 }
