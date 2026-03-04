@@ -20,13 +20,23 @@ html {
     scroll-behavior: smooth;
 }
 
-/*  Police personnalisée */
+/*  Police personnalisée 1*/
 @font-face {
     font-family: 'LTCarpet';
     src: url('../font/LTCarpet.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
+/*  Police personnalisée 2*/
+@font-face {
+    font-family: 'Rocline';
+    src: url('../font/RoclinePersonalUseOnly-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -216,7 +226,7 @@ header {
 /* ===================== */
 
 .rainbow-name {
-    font-family: 'LTCarpet', sans-serif;
+    font-family: 'Rocline', sans-serif;
     display: inline-block;
     font-size: clamp(2.5rem, 8vw, 4.5rem);
     font-weight: 800;
