@@ -5,8 +5,8 @@
     <title>Gruik & Vixen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- TON CSS PRINCIPAL -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- CSS CORRIGÉ -->
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- ICONES -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,14 +14,14 @@
 
 <body>
 
-<!-- HEADER IDENTIQUE -->
+<!-- HEADER -->
 <header>
     <div class="logo">Méline Monteiro</div>
     <nav class="nav-menu">
-        <a href="index.html#home">Accueil</a>
-        <a href="index.html#projects">Projets</a>
-        <a href="index.html#about">À propos</a>
-        <a href="index.html#contact">Contact</a>
+        <a href="../index.html#home">Accueil</a>
+        <a href="../index.html#projects">Projets</a>
+        <a href="../index.html#about">À propos</a>
+        <a href="../index.html#contact">Contact</a>
     </nav>
 
     <button class="menu-toggle" id="menuToggle">
@@ -31,12 +31,12 @@
     </button>
 </header>
 
-<!-- HERO IDENTIQUE AU STYLE -->
+<!-- HERO (même style que la home) -->
 <section class="hero">
     <div class="hero-content">
 
         <div class="profile-image">
-            <img src="Images/Gruik and Vixen.png" alt="Gruik & Vixen">
+            <img src="../Images/Gruik and Vixen.png" alt="Gruik & Vixen">
         </div>
 
         <div class="hero-text">
@@ -51,31 +51,21 @@
             <p class="subtitle">Caravan Shooter</p>
 
             <p class="description">
-                Un jeu arcade dynamique mêlant score, survie et stratégie.
+                Un jeu arcade dynamique mêlant score, stratégie et protection.
             </p>
-
-            <div class="hero-buttons">
-                <a href="#download" class="btn btn-primary">
-                    <i class="fas fa-download"></i> Télécharger
-                </a>
-
-                <a href="index.html#projects" class="btn btn-secondary">
-                    <i class="fas fa-arrow-left"></i> Retour
-                </a>
-            </div>
         </div>
 
     </div>
 </section>
 
-<!-- CONTENU = MEME STYLE QUE TES SECTIONS -->
+<!-- CONTENU -->
 <section class="projects-featured">
     <div class="container">
 
         <h2 class="section-title">Contexte</h2>
         <div class="about-text">
             <p>
-                Projet de game design visant à créer une expérience arcade dynamique
+                Projet de game design visant à créer une expérience arcade rapide et engageante,
                 centrée sur la gestion du score et la prise de risque.
             </p>
         </div>
@@ -83,32 +73,32 @@
         <h2 class="section-title">Synopsis</h2>
         <div class="about-text">
             <p>
-                Le joueur contrôle Vixen, un renard tireur, accompagné de Gruik,
-                une tirelire vivante qui stocke les pièces collectées.
+                Le joueur incarne Vixen, un renard tireur, accompagné de Gruik,
+                une tirelire qui stocke les pièces collectées tout au long de la partie.
             </p>
         </div>
 
         <h2 class="section-title">Rôle dans le projet</h2>
         <div class="about-text">
             <p>
-                Conception du gameplay, équilibrage du système de score
-                et création de l’expérience utilisateur.
+                Conception du gameplay, équilibrage des mécaniques de score
+                et réflexion sur l'expérience utilisateur.
             </p>
         </div>
 
         <h2 class="section-title">Gameplay</h2>
         <div class="about-text">
             <p>
-                Éliminer des ennemis, collecter des pièces et protéger Gruik
-                dans un système de jeu basé sur le risque et la récompense.
+                Le joueur doit éliminer des ennemis, collecter des pièces
+                et protéger Gruik dans un système basé sur le risque et la récompense.
             </p>
         </div>
 
         <h2 class="section-title">Level Design</h2>
         <div class="about-text">
             <p>
-                Organisation des vagues ennemies et gestion du rythme pour maintenir
-                une tension constante.
+                Mise en place de vagues d’ennemis et de zones de collecte
+                pour maintenir un rythme dynamique et stimulant.
             </p>
         </div>
 
@@ -116,21 +106,21 @@
         <div class="about-text">
             <p>
                 Interface claire avec feedback visuels pour améliorer la lisibilité
-                et l’engagement du joueur.
+                et renforcer l’immersion du joueur.
             </p>
         </div>
 
     </div>
 </section>
 
-<!-- SECTION TELECHARGEMENT AVEC TON STYLE -->
-<section id="download" class="contact">
+<!-- TELECHARGEMENT -->
+<section class="contact">
     <div class="container">
 
         <h2 class="section-title">Télécharger le jeu</h2>
 
         <div class="contact-content">
-            <a href="jeu/gruik-and-vixen.zip" download class="contact-link">
+            <a href="../jeu/gruik-and-vixen.zip" download class="contact-link">
                 <div class="contact-icon">
                     <i class="fas fa-download"></i>
                 </div>
@@ -138,15 +128,23 @@
             </a>
         </div>
 
+        <!-- BOUTON RETOUR -->
+        <div style="text-align:center; margin-top:40px;">
+            <a href="../index.html#projects" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Retour aux projets
+            </a>
+        </div>
+
     </div>
 </section>
 
-<!-- FOOTER IDENTIQUE -->
+<!-- FOOTER -->
 <footer>
     <p>&copy; 2026 Méline Monteiro. Tous droits réservés.</p>
 </footer>
 
-<script src="js/script.js"></script>
+<!-- JS CORRIGÉ -->
+<script src="../js/script.js"></script>
 
 </body>
 </html>
