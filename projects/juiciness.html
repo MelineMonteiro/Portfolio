@@ -3,47 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <title>Juiciness</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS CORRIGÉ -->
     <link rel="stylesheet" href="../css/style.css">
+
+    <!-- ICONES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
-<!-- Header avec bouton retour -->
-<header class="project-header">
-    <a href="../index.html" class="back-button">← Retour aux projets</a>
-    <h1>Juiciness</h1>
+<!-- HEADER -->
+<header>
+    <div class="logo">Méline Monteiro</div>
+    <nav class="nav-menu">
+        <a href="../index.html#home">Accueil</a>
+        <a href="../index.html#projects">Projets</a>
+        <a href="../index.html#about">À propos</a>
+        <a href="../index.html#contact">Contact</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 </header>
 
-<main class="project-container">
+<!-- HERO (même style que la home) -->
+<section class="hero">
+    <div class="hero-content">
 
-    <!-- Contexte -->
-    <section class="project-section">
-        <h2>Contexte</h2>
-        <p>Texte expliquant le contexte du projet.</p>
-    </section>
+        <div class="profile-image">
+            <img src="../Images/Gruik and Vixen.png" alt="Gruik & Vixen">
+        </div>
 
-    <!-- Synopsis ou Processus / Réalisation selon projet -->
-    <section class="project-section">
-        <h2>Processus de réalisation</h2>
-        <p>Texte expliquant le synopsis, processus de réalisation ou réalisation selon le projet.</p>
-    </section>
+        <div class="hero-text">
+            <h1 class="rainbow-name">
+                <span>G</span><span>r</span><span>u</span><span>i</span><span>k</span>
+                <span> </span>
+                <span>&</span>
+                <span> </span>
+                <span>V</span><span>i</span><span>x</span><span>e</span><span>n</span>
+            </h1>
 
-   
+           
 
-    <!-- Téléchargement -->
-    <section class="project-section download">
-        <h2>Télécharger le projet</h2>
-        <a href="../downloads/nom-du-projet.zip" class="download-button" download>
-            Télécharger
-        </a>
-    </section>
+            <p class="description">
+                Un jeu arcade dynamique mêlant score, stratégie et protection.
+            </p>
+        </div>
 
-</main>
+    </div>
+</section>
 
-<!-- Barre contact -->
-<div class="contact-bar">
-    <p>Me contacter : tonemail@example.com</p>
-</div>
+<!-- CONTENU -->
+<section class="projects-featured">
+    <div class="container">
+
+        <h2 class="section-title">Contexte</h2>
+        <div class="about-text">
+            <p>
+                Projet de game design visant à créer une expérience arcade rapide et engageante,
+                centrée sur la gestion du score et la prise de risque.
+            </p>
+        </div>
+
+        
+
+        <h2 class="section-title">Rôle dans le projet</h2>
+        <div class="about-text">
+            <p>
+                Conception du gameplay, équilibrage des mécaniques de score
+                et réflexion sur l'expérience utilisateur.
+            </p>
+        </div>
+
+        
+
+        
+
+    </div>
+</section>
+
+<!-- TELECHARGEMENT -->
+<section class="contact">
+    <div class="container">
+
+        <h2 class="section-title">Télécharger le jeu</h2>
+
+        <div class="contact-content">
+            <a href="../jeu/gruik-and-vixen.zip" download class="contact-link">
+                <div class="contact-icon">
+                    <i class="fas fa-download"></i>
+                </div>
+                <span>Télécharger Gruik & Vixen</span>
+            </a>
+        </div>
+
+        <!-- BOUTON RETOUR -->
+        <div style="text-align:center; margin-top:40px;">
+            <a href="../index.html#projects" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Retour aux projets
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact">
+    <div class="container">
+        <h2 class="section-title">Me Contacter</h2>
+        
+        <div class="contact-content">
+            <a href="mailto:meline@email.com" class="contact-link">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <span>meline@email.com</span>
+            </a>
+
+            <a href="https://linkedin.com/in/meline" target="_blank" class="contact-link">
+                <div class="contact-icon">
+                    <i class="fas fa-linkedin"></i>
+                </div>
+                <span>LinkedIn</span>
+            </a>
+
+            <a href="https://meline.itch.io" target="_blank" class="contact-link">
+                <div class="contact-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <span>itch.io</span>
+            </a>
+        </div>
+
+       
+
+    </div>
+</section>
+<!-- JS CORRIGÉ -->
+<script src="../js/script.js"></script>
 
 </body>
 </html>
