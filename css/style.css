@@ -20,6 +20,14 @@ html {
     scroll-behavior: smooth;
 }
 
+/*  Police personnalisée */
+@font-face {
+    font-family: 'LTCarpet';
+    src: url('../font/LTCarpet.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: white;
@@ -53,6 +61,7 @@ header {
 }
 
 .logo {
+    font-family: 'LTCarpet', sans-serif;
     font-weight: 700;
     font-size: 1.8rem;
     background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
