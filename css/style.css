@@ -322,7 +322,7 @@ header {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    background: black;
     color: white;
     box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4);
 }
