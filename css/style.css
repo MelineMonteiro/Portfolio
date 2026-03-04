@@ -106,7 +106,7 @@ header {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #6366f1, #ec4899);
+    background: black;
     transition: var(--transition);
 }
 
