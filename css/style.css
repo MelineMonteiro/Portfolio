@@ -61,7 +61,7 @@ header {
 }
 
 .logo {
-    font-family: 'LTCarpet', sans-serif;
+   
     font-weight: 700;
     font-size: 1.8rem;
     background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
@@ -216,6 +216,7 @@ header {
 /* ===================== */
 
 .rainbow-name {
+    font-family: 'LTCarpet', sans-serif;
     display: inline-block;
     font-size: clamp(2.5rem, 8vw, 4.5rem);
     font-weight: 800;
