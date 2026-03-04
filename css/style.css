@@ -211,7 +211,7 @@ header {
 .subtitle {
     font-size: 1.3rem;
     font-weight: 600;
-    color: var(--primary);
+    color: black;
     margin-bottom: 10px;
 }
 
