@@ -605,6 +605,10 @@ background-size: 25px 25px;
     position: relative;
 }
 
+.about .section-title {
+    color: white;
+}
+
 .about-decorations {
     display: none;
 }
