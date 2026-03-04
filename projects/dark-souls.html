@@ -2,67 +2,144 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Dark Souls - Analyse</title>
+    <title>Dark Souls</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Lien vers TON CSS global -->
+    <!-- CSS CORRIGÉ -->
     <link rel="stylesheet" href="../css/style.css">
+
+    <!-- ICONES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- Bouton retour -->
-    <header class="project-header">
-        <a href="../index.html" class="back-button">← Retour</a>
-        <h1>Dark Souls</h1>
-    </header>
+<!-- HEADER -->
+<header>
+    <div class="logo">Méline Monteiro</div>
+    <nav class="nav-menu">
+        <a href="../index.html#home">Accueil</a>
+        <a href="../index.html#projects">Projets</a>
+        <a href="../index.html#about">À propos</a>
+        <a href="../index.html#contact">Contact</a>
+    </nav>
 
-    <main class="project-container">
+    <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</header>
 
-        <!-- CONTEXTE -->
-        <section class="project-section">
-            <h2>Contexte</h2>
-            <p>
-                Ce projet est une analyse et/ou reproduction inspirée de Dark Souls, 
-                un jeu reconnu pour sa difficulté exigeante et son level design interconnecté. 
-                L’objectif était de comprendre les mécaniques qui rendent l’expérience 
-                à la fois frustrante et gratifiante.
+<!-- HERO (même style que la home) -->
+<section class="hero">
+    <div class="hero-content">
+
+        <div class="profile-image">
+            <img src="../Images/Gruik and Vixen.png" alt="Gruik & Vixen">
+        </div>
+
+        <div class="hero-text">
+            <h1 class="rainbow-name">
+                <span>G</span><span>r</span><span>u</span><span>i</span><span>k</span>
+                <span> </span>
+                <span>&</span>
+                <span> </span>
+                <span>V</span><span>i</span><span>x</span><span>e</span><span>n</span>
+            </h1>
+
+            <p class="subtitle">Level Design</p>
+
+            <p class="description">
+                Un jeu arcade dynamique mêlant score, stratégie et protection.
             </p>
-        </section>
+        </div>
 
-        <!-- PROCESSUS DE REALISATION -->
-        <section class="project-section">
-            <h2>Processus de réalisation</h2>
-            <p>
-                Le travail a commencé par une étude approfondie des mécaniques principales : 
-                combat, gestion de l’endurance, placement des ennemis et construction du monde.
-            </p>
-
-            <p>
-                Ensuite, une phase de prototypage a permis de tester différentes approches 
-                de gameplay, en mettant l’accent sur le feedback joueur et la lisibilité des actions.
-            </p>
-
-            <p>
-                Enfin, le level design a été structuré pour encourager l’exploration, 
-                avec des raccourcis et une progression non linéaire, reprenant les codes 
-                emblématiques du genre.
-            </p>
-        </section>
-
-        <!-- TELECHARGEMENT -->
-        <section class="project-section download">
-            <h2>Télécharger le projet</h2>
-            <a href="../downloads/dark-souls.zip" class="download-button" download>
-                Télécharger
-            </a>
-        </section>
-
-    </main>
-
-    <!-- BARRE CONTACT -->
-    <div class="contact-bar">
-        <p>Me contacter : tonemail@example.com</p>
     </div>
+</section>
+
+<!-- CONTENU -->
+<section class="projects-featured">
+    <div class="container">
+
+        <h2 class="section-title">Contexte</h2>
+        <div class="about-text">
+            <p>
+                Projet de game design visant à créer une expérience arcade rapide et engageante,
+                centrée sur la gestion du score et la prise de risque.
+            </p>
+        </div>
+
+        <h2 class="section-title">Réalisation</h2>
+        <div class="about-text">
+            <p>
+                Le joueur incarne Vixen, un renard tireur, accompagné de Gruik,
+                une tirelire qui stocke les pièces collectées tout au long de la partie.
+            </p>
+        </div>
+
+       
+    </div>
+</section>
+
+<!-- TELECHARGEMENT -->
+<section class="contact">
+    <div class="container">
+
+        <h2 class="section-title">Télécharger le jeu</h2>
+
+        <div class="contact-content">
+            <a href="../jeu/gruik-and-vixen.zip" download class="contact-link">
+                <div class="contact-icon">
+                    <i class="fas fa-download"></i>
+                </div>
+                <span>Télécharger</span>
+            </a>
+        </div>
+
+        <!-- BOUTON RETOUR -->
+        <div style="text-align:center; margin-top:40px;">
+            <a href="../index.html#projects" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Retour aux projets
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact">
+    <div class="container">
+        <h2 class="section-title">Me Contacter</h2>
+        
+        <div class="contact-content">
+            <a href="mailto:meline@email.com" class="contact-link">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <span>meline@email.com</span>
+            </a>
+
+            <a href="https://linkedin.com/in/meline" target="_blank" class="contact-link">
+                <div class="contact-icon">
+                    <i class="fas fa-linkedin"></i>
+                </div>
+                <span>LinkedIn</span>
+            </a>
+
+            <a href="https://meline.itch.io" target="_blank" class="contact-link">
+                <div class="contact-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <span>itch.io</span>
+            </a>
+        </div>
+
+       
+
+    </div>
+</section>
+<!-- JS CORRIGÉ -->
+<script src="../js/script.js"></script>
 
 </body>
 </html>
