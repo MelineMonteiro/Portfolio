@@ -2,70 +2,144 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Fantasy Life - Projet</title>
+    <title>Fantasy Life</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Lien vers TON CSS global -->
+    <!-- CSS CORRIGÉ -->
     <link rel="stylesheet" href="../css/style.css">
+
+    <!-- ICONES -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- Bouton retour -->
-    <header class="project-header">
-        <a href="../index.html" class="back-button">← Retour</a>
-        <h1>Fantasy Life</h1>
-    </header>
+<!-- HEADER -->
+<header>
+    <div class="logo">Méline Monteiro</div>
+    <nav class="nav-menu">
+        <a href="../index.html#home">Accueil</a>
+        <a href="../index.html#projects">Projets</a>
+        <a href="../index.html#about">À propos</a>
+        <a href="../index.html#contact">Contact</a>
+    </nav>
 
-    <main class="project-container">
+    <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</header>
 
-        <!-- CONTEXTE -->
-        <section class="project-section">
-            <h2>Contexte</h2>
-            <p>
-                Ce projet s’inspire de Fantasy Life, un jeu mêlant RPG et simulation de vie. 
-                L’objectif était d’explorer la diversité des activités proposées au joueur 
-                et la liberté dans la progression.
+<!-- HERO (même style que la home) -->
+<section class="hero">
+    <div class="hero-content">
+
+        <div class="profile-image">
+            <img src="../Images/Gruik and Vixen.png" alt="Gruik & Vixen">
+        </div>
+
+        <div class="hero-text">
+            <h1 class="rainbow-name">
+                <span>G</span><span>r</span><span>u</span><span>i</span><span>k</span>
+                <span> </span>
+                <span>&</span>
+                <span> </span>
+                <span>V</span><span>i</span><span>x</span><span>e</span><span>n</span>
+            </h1>
+
+            <p class="subtitle">Free-to-play</p>
+
+            <p class="description">
+                Un jeu arcade dynamique mêlant score, stratégie et protection.
             </p>
+        </div>
 
-            <p>
-                Le projet met l’accent sur la multiplicité des rôles jouables et sur 
-                l’équilibre entre exploration, combat et artisanat.
-            </p>
-        </section>
-
-        <!-- REALISATION -->
-        <section class="project-section">
-            <h2>Réalisation</h2>
-            <p>
-                La réalisation a débuté par la définition des différents systèmes de jeu, 
-                notamment les métiers et les interactions possibles avec l’environnement.
-            </p>
-
-            <p>
-                Une attention particulière a été portée à la progression du joueur, 
-                avec des mécaniques permettant d’évoluer librement selon ses préférences.
-            </p>
-
-            <p>
-                Le design global vise à offrir une expérience accessible et variée, 
-                en combinant plusieurs styles de gameplay dans un univers cohérent.
-            </p>
-        </section>
-
-        <!-- TELECHARGEMENT -->
-        <section class="project-section download">
-            <h2>Télécharger le projet</h2>
-            <a href="../downloads/fantasy-life.zip" class="download-button" download>
-                Télécharger
-            </a>
-        </section>
-
-    </main>
-
-    <!-- BARRE CONTACT -->
-    <div class="contact-bar">
-        <p>Me contacter : tonemail@example.com</p>
     </div>
+</section>
+
+<!-- CONTENU -->
+<section class="projects-featured">
+    <div class="container">
+
+        <h2 class="section-title">Contexte</h2>
+        <div class="about-text">
+            <p>
+                Projet de game design visant à créer une expérience arcade rapide et engageante,
+                centrée sur la gestion du score et la prise de risque.
+            </p>
+        </div>
+
+        <h2 class="section-title">Réalisation</h2>
+        <div class="about-text">
+            <p>
+                Le joueur incarne Vixen, un renard tireur, accompagné de Gruik,
+                une tirelire qui stocke les pièces collectées tout au long de la partie.
+            </p>
+        </div>
+
+       
+    </div>
+</section>
+
+<!-- TELECHARGEMENT -->
+<section class="contact">
+    <div class="container">
+
+        <h2 class="section-title">Télécharger le jeu</h2>
+
+        <div class="contact-content">
+            <a href="../jeu/gruik-and-vixen.zip" download class="contact-link">
+                <div class="contact-icon">
+                    <i class="fas fa-download"></i>
+                </div>
+                <span>Télécharger Gruik & Vixen</span>
+            </a>
+        </div>
+
+        <!-- BOUTON RETOUR -->
+        <div style="text-align:center; margin-top:40px;">
+            <a href="../index.html#projects" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Retour aux projets
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact">
+    <div class="container">
+        <h2 class="section-title">Me Contacter</h2>
+        
+        <div class="contact-content">
+            <a href="mailto:meline@email.com" class="contact-link">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <span>meline@email.com</span>
+            </a>
+
+            <a href="https://linkedin.com/in/meline" target="_blank" class="contact-link">
+                <div class="contact-icon">
+                    <i class="fas fa-linkedin"></i>
+                </div>
+                <span>LinkedIn</span>
+            </a>
+
+            <a href="https://meline.itch.io" target="_blank" class="contact-link">
+                <div class="contact-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <span>itch.io</span>
+            </a>
+        </div>
+
+       
+
+    </div>
+</section>
+<!-- JS CORRIGÉ -->
+<script src="../js/script.js"></script>
 
 </body>
 </html>
