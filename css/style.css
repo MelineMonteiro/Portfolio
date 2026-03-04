@@ -141,9 +141,16 @@ header {
     align-items: center;
     justify-content: center;
     padding: 40px 20px;
-    background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+   /* quadrillage */
+    background-image:
+        linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+
+    background-size: 25px 25px;
+
     position: relative;
     overflow: hidden;
+
 }
 
 .hero-decorations {
