@@ -61,10 +61,10 @@
 <section class="hp-description">
     <div class="container">
         <h2>Contexte</h2>
-        <p>Ce projet a été conçu pour explorer le gameplay coopératif asymétrique avec des mécaniques simples mais engageantes. L’accent est mis sur la coordination entre les personnages pour atteindre les objectifs.</p>
+        <p>Ce projet a été réalisé dans le cadre d’une game jam sur itch.io, intitulée Caravan Jam. Comme son nom l’indique, le thème imposé consistait à créer un caravan shooter. Les contraintes étaient relativement limitées : le jeu devait simplement proposer un niveau d’une durée comprise entre 2 et 5 minutes. Nous avons développé ce projet en deux semaines, en binôme.</p>
 
         <h2>Synopsis</h2>
-        <p>Le joueur incarne Gruik et Vixen à travers différents niveaux où chaque décision et chaque tir impactent le score et la progression. L’histoire mêle humour et défis tactiques.</p>
+        <p>Dans Vixen & Gruik, le joueur contrôle à la fois le renard capable de tirer et la tirelire-cochon qui stocke le score. L’objectif est de récolter un maximum de pièces en éliminant les poules enragées tout en protégeant la tirelire pour éviter qu’elle ne les perde… le tout sans mélanger ses contrôles !</p>
     </div>
 </section>
 
@@ -72,7 +72,13 @@
 <section class="hp-realisation">
     <div class="container">
         <h2>Réalisation</h2>
-        <p>Le jeu a été développé en utilisant Unity et des assets 2D personnalisés pour créer un style cartoon dynamique. L’accent a été mis sur la fluidité des animations et la jouabilité.</p>
+        <p>Nous avons commencé par réfléchir puis concevoir le gameplay en imaginant un jeu où deux personnages sont contrôlés simultanément.
+Vixen, un renard cupide, est le tireur. Il élimine les ennemis pour protéger Gruik. Lorsqu’il est touché, il est temporairement ralenti et ne peut plus tirer pendant un court moment. Il se contrôle avec Z, Q, D, et saute avec la barre d’espace.
+Gruik est une tirelire-cochon volante chargée de stocker le butin récupéré par Vixen. S’il subit des dégâts, il perd une partie de l’argent accumulé. Il se contrôle avec les flèches directionnelles.
+Les ennemis sont des poules, réparties en deux types: les Brawlers qui foncent sur Gruik pour lui infliger des dégâts au contact et les Shooters qui tirent des œufs projectiles et peuvent cibler Vixen ou Gruik.
+
+Pour le jeu nous nous sommes inspirés de Darius et de Final Soldier.
+</p>
     </div>
 </section>
 
@@ -85,7 +91,9 @@
         <div class="hp-feature-divider"></div>
         <div class="hp-feature-text">
             <h3>UI / UX</h3>
-            <p>Conception d'interfaces claires et intuitives pour que le joueur puisse se concentrer sur le gameplay. Utilisation de couleurs et animations pour guider l'utilisateur.</p>
+            <p>L’élément le plus important à transmettre au joueur est le nombre de pièces qu’il a réussi à collecter. Pour garantir une bonne lisibilité, ce score est affiché en bas à gauche de l’écran, un emplacement qui permet de le voir facilement sans gêner la visibilité du niveau.
+Les menus, quant à eux, ont été pensés pour être simples et compréhensibles. Leur objectif est de permettre au joueur d’accéder rapidement au jeu ou de retourner facilement au menu principal, sans surcharge visuelle.
+</p>
         </div>
     </div>
 </section>
@@ -99,7 +107,11 @@
         <div class="hp-feature-divider"></div>
         <div class="hp-feature-text">
             <h3>Level Design</h3>
-            <p>Chaque niveau a été conçu pour proposer un challenge progressif, avec des obstacles variés et des zones stratégiques encourageant la coopération entre Gruik et Vixen.</p>
+            <p>Le niveau dure environ 2 minutes et a été conçu pour que l’intensité augmente progressivement tout comme le nombre d’ennemis, tandis que les zones de protection disparaissent petit à petit.
+Le jeu est un side-scroller forcé, à la manière de Geometry Dash. Au début, les ennemis les plus simples apparaissent en faible quantité pour permettre au joueur de prendre en main les contrôles. La première partie du niveau est même vide d’ennemis pour faciliter l’adaptation.
+Durant la première moitié, Gruik peut se protéger grâce à des éléments de décor, qui disparaissent progressivement pour rendre la fin du niveau plus intense.
+Les ennemis apparaissent zone par zone afin d’avoir un rythme fluide.
+</p>
         </div>
     </div>
 </section>
