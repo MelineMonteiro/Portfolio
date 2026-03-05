@@ -523,43 +523,43 @@ section {
     gap: 8px;
 }
 
-/* HERO PROJET - VERSION ISOLÉE */
+/* ===================== */
+/* HERO PROJET - VERSION MODIFIEE */
+/* ===================== */
+
 .hp-hero {
     padding: 120px 20px;
-    background-color: black;
+    background-color: white;
     background-image:
-        linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255,255,255,0.08) 1px, transparent 1px);
+        linear-gradient(to right, rgba(0,0,0,0.08) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,0,0,0.08) 1px, transparent 1px);
     background-size: 25px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hp-container {
     max-width: 1200px;
-    margin: 0 auto;
-}
-
-.hp-card {
     display: flex;
     align-items: center;
-    gap: 40px;
-    max-width: 1100px;
-    width: 100%;
-    background: white;
-    padding: 30px;
-    box-sizing: border-box;
+    gap: 60px;
+    flex-wrap: wrap;
 }
 
+/* Image à gauche */
 .hp-image {
-    width: 45%;
+    flex: 0 0 45%;
     overflow: hidden;
-    border: 3px solid rgba(255,255,255,0.8); /* cadre blanc */
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
 }
 
 .hp-image img {
     width: 100%;
     height: auto;
-    display: block;
     object-fit: cover;
+    display: block;
     transition: transform 0.3s;
 }
 
@@ -567,70 +567,171 @@ section {
     transform: scale(1.02);
 }
 
-/* barre verticale */
-.hp-divider {
-    width: 2px;
-    background: black;
-    height: 220px;
-    flex-shrink: 0;
-}
-
-/* texte */
+/* Texte à droite */
 .hp-info {
-    width: 45%;
+    flex: 0 0 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.hp-info h3 {
-    font-size: 2rem;
-    margin-bottom: 15px;
+/* Titre principal comme page principale */
+.hp-info h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
     color: black;
-}
-
-.hp-info p {
-    font-size: 1rem;
-    line-height: 1.6;
     margin-bottom: 20px;
-    color: black;
 }
 
-/* bouton */
-.hp-btn {
-    display: inline-flex;
-    width: auto;
-    max-width: fit-content;
-    align-items: center;
-    gap: 6px;
-    text-decoration: none;
+.hp-info h2 {
+    font-size: 1.3rem;
     font-weight: 600;
-    padding: 8px 16px;
-    border-radius: 4px;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+/* ===================== */
+/* CONTEXTE + SYNOPSIS */
+/* ===================== */
+.hp-description {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hp-description h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.hp-description p {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    line-height: 1.7;
+}
+
+/* ===================== */
+/* REALISATION */
+/* ===================== */
+.hp-realisation {
+    background: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hp-realisation h2 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 40px;
+}
+
+/* ===================== */
+/* UI/UX & LEVEL DESIGN */
+/* ===================== */
+.hp-feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 80px 20px;
+    background: white;
+}
+
+.hp-feature.reverse {
+    flex-direction: row-reverse;
+}
+
+.hp-feature .hp-feature-image {
+    flex: 0 0 45%;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.hp-feature .hp-feature-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.hp-feature .hp-feature-divider {
+    width: 2px;
+    background: black;
+    flex-shrink: 0;
+    height: 200px;
+}
+
+.hp-feature .hp-feature-text {
+    flex: 0 0 45%;
+}
+
+.hp-feature .hp-feature-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.hp-feature .hp-feature-text p {
+    line-height: 1.6;
+}
+
+/* ===================== */
+/* BOUTON TELECHARGER */
+/* ===================== */
+.hp-download {
+    background: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hp-download .btn-download {
     background: black;
     color: white;
-    font-size: 0.9rem;
+    padding: 12px 28px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 4px;
     transition: all 0.3s;
 }
 
-.hp-btn:hover {
+.hp-download .btn-download:hover {
     background: #333;
-    gap: 8px;
 }
 
+/* ===================== */
+/* SEPARATEUR QUADRILLAGE */
+/* ===================== */
+.hp-grid-separator {
+    height: 120px;
+    background-color: black;
+    background-image:
+        linear-gradient(to right, rgba(255,255,255,0.8) 0.5px, transparent 0.5px),
+        linear-gradient(to bottom, rgba(255,255,255,0.8) 0.5px, transparent 0.5px);
+    background-size: 25px 25px;
+}
+
+/* ===================== */
 /* RESPONSIVE */
 @media (max-width: 900px) {
-    .hp-card {
+    .hp-container, .hp-feature {
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
     }
-
-    .hp-image, .hp-info {
+    .hp-image, .hp-info, .hp-feature .hp-feature-image, .hp-feature .hp-feature-text {
         width: 100%;
     }
-
-    .hp-divider {
+    .hp-feature-divider {
         display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .hp-info h1 {
+        font-size: 2rem;
+    }
+    .hp-info h2 {
+        font-size: 1rem;
     }
 }
 /* ===================== */
