@@ -522,6 +522,218 @@ section {
     background: #333;
     gap: 8px;
 }
+
+/* ===================== */
+/* HERO PROJET */
+/* ===================== */
+
+.project-hero {
+background-color: black;
+background-image:
+linear-gradient(to right, rgba(255,255,255,0.8) 0.5px, transparent 0.5px),
+linear-gradient(to bottom, rgba(255,255,255,0.8) 0.5px, transparent 0.5px);
+background-size: 25px 25px;
+
+padding: 120px 20px;
+display: flex;
+justify-content: center;
+}
+
+.project-card.clean-layout {
+display: flex;
+align-items: center;
+gap: 40px;
+max-width: 1100px;
+width: 100%;
+background: white;
+padding: 30px;
+}
+
+
+/* image */
+
+.project-image-wrapper {
+width: 45%;
+}
+
+.project-image-wrapper img{
+width:100%;
+height:auto;
+display:block;
+}
+
+
+/* barre verticale */
+
+.project-divider{
+width:1px;
+background:black;
+height:220px;
+}
+
+
+/* texte */
+
+.project-info{
+width:45%;
+}
+
+.project-info h3{
+font-size:2rem;
+margin-bottom:15px;
+color:black;
+}
+
+.project-info p{
+font-size:1rem;
+line-height:1.6;
+margin-bottom:20px;
+}
+
+
+/* bouton */
+
+.project-btn{
+display:inline-block;
+background:black;
+color:white;
+padding:8px 16px;
+text-decoration:none;
+font-weight:600;
+font-size:0.9rem;
+}
+
+.project-btn:hover{
+background:#333;
+}
+
+
+/* ===================== */
+/* CONTEXTE + SYNOPSIS */
+/* ===================== */
+
+.project-description{
+background:black;
+color:white;
+padding:100px 20px;
+text-align:center;
+}
+
+.project-description h2{
+font-size:2rem;
+margin-bottom:20px;
+}
+
+.project-description p{
+max-width:800px;
+margin:0 auto 60px auto;
+line-height:1.7;
+}
+
+
+/* ===================== */
+/* REALISATION */
+/* ===================== */
+
+.project-realisation{
+background:white;
+padding:100px 20px;
+text-align:center;
+}
+
+.project-realisation h2{
+color:black;
+font-size:2rem;
+}
+
+
+/* ===================== */
+/* UI UX + LEVEL DESIGN */
+/* ===================== */
+
+.project-feature{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:40px;
+padding:100px 20px;
+background:white;
+}
+
+.feature-image{
+width:40%;
+}
+
+.feature-image img{
+width:100%;
+display:block;
+}
+
+.feature-divider{
+width:1px;
+background:black;
+height:200px;
+}
+
+.feature-text{
+width:40%;
+}
+
+.feature-text h3{
+font-size:1.8rem;
+margin-bottom:15px;
+}
+
+.feature-text p{
+line-height:1.6;
+}
+
+
+/* inversion layout */
+
+.project-feature.reverse{
+flex-direction:row-reverse;
+}
+
+
+/* ===================== */
+/* TELECHARGER */
+/* ===================== */
+
+.download-section{
+background:white;
+padding:80px;
+text-align:center;
+}
+
+.download-btn{
+background:black;
+color:white;
+padding:12px 28px;
+text-decoration:none;
+font-weight:600;
+}
+
+.download-btn:hover{
+background:#333;
+}
+
+
+/* ===================== */
+/* SEPARATEUR QUADRILLAGE */
+/* ===================== */
+
+.grid-separator{
+height:120px;
+
+background-color:black;
+
+background-image:
+linear-gradient(to right, rgba(255,255,255,0.8) 0.5px, transparent 0.5px),
+linear-gradient(to bottom, rgba(255,255,255,0.8) 0.5px, transparent 0.5px);
+
+background-size:25px 25px;
+}
 /* ===================== */
 /* PROJETS ANNEXE */
 /* ===================== */
