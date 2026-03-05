@@ -736,7 +736,7 @@ section {
     padding: 12px 28px;      /* taille du rectangle */
     font-weight: 600;
     text-decoration: none;
-    border-radius: none;      /* coins légèrement arrondis */
+    border-radius: 0;      /* coins légèrement arrondis */
     transition: all 0.3s;
     font-size: 1rem;
 }
