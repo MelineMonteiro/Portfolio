@@ -375,11 +375,11 @@ section {
 }
 
 /* ===================== */
-/* PROJETS - Layout épuré ajusté */
+/* PROJETS  */
 /* ===================== */
 
 .projects-featured {
-    background: var(--bg-light);
+    background: white;
 }
 
 .featured-projects {
@@ -446,20 +446,20 @@ section {
     color: var(--text-dark);
 }
 
-/* Bouton noir "Voir le projet" taille normale */
 .project-btn {
-    display: inline-flex; /* reste au format “taille du texte + padding” */
+    display: inline-flex;      /* taille du contenu + padding */
+    width: auto !important;    /* empêche toute expansion */
+    max-width: fit-content;    /* sécurise la largeur max */
     align-items: center;
     gap: 6px;
     text-decoration: none;
     font-weight: 600;
-    padding: 6px 12px; /* taille du bouton plus compacte */
+    padding: 6px 12px;         /* petite taille */
     border-radius: 4px;
     background: black;
     color: white;
     font-size: 0.9rem;
     transition: all 0.3s;
-    width: auto; /* IMPORTANT : ne pas étendre à toute la largeur */
 }
 .project-btn:hover {
     background: #333;
