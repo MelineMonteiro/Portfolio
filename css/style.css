@@ -375,11 +375,11 @@ section {
 }
 
 /* ===================== */
-/* PROJETS - Layout épuré uniquement */
+/* PROJETS - Layout épuré ajusté */
 /* ===================== */
 
 .projects-featured {
-    background: var(--bg-light); /* fond clair de la section */
+    background: var(--bg-light);
 }
 
 .featured-projects {
@@ -388,17 +388,15 @@ section {
     gap: 40px; /* espace entre les cartes */
     max-width: 1000px;
     margin: 0 auto;
-    position: relative;
-    z-index: 1;
 }
 
 /* Carte projet épurée */
 .project-card.featured.clean-layout {
     display: flex;
-    align-items: center;
+    align-items: stretch; /* pour que barre et image prennent toute la hauteur */
     gap: 20px; /* espace entre image, barre et texte */
     padding: 20px 0; /* espace vertical entre les cartes */
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* optionnel : séparateur entre cartes */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 /* Image à gauche */
@@ -410,22 +408,21 @@ section {
 
 .project-image-wrapper img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     object-fit: cover;
     transition: transform 0.3s;
 }
 
 .project-card.featured.clean-layout:hover .project-image-wrapper img {
-    transform: scale(1.02); /* léger zoom au survol */
+    transform: scale(1.02);
 }
 
-/* Fine barre verticale */
+/* Fine barre verticale entre image et texte */
 .project-divider {
     width: 2px;
     background-color: black;
     flex-shrink: 0;
-    margin: 0 20px; /* espace autour de la barre */
 }
 
 /* Texte et bouton */
@@ -449,23 +446,24 @@ section {
     color: var(--text-dark);
 }
 
-/* Bouton noir "Voir le projet" */
+/* Bouton noir "Voir le projet" plus petit */
 .project-btn {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     text-decoration: none;
     font-weight: 600;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 6px 12px; /* moins grand que précédemment */
+    border-radius: 4px;
     background: black;
     color: white;
+    font-size: 0.9rem;
     transition: all 0.3s;
 }
 
 .project-btn:hover {
     background: #333;
-    gap: 12px;
+    gap: 8px;
 }
 /* ===================== */
 /* PROJETS ANNEXE */
