@@ -650,11 +650,16 @@ background-size: 25px 25px;
     padding: 60px 0;
 }
 
-.contact .section-title {
-    color: black;
+.contact-section-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
     text-align: center;
-    margin-bottom: 40px;
-    font-size: 2rem;
+    margin-bottom: 60px;
+    background: black;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
 }
 
 .contact-content {
