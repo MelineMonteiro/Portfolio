@@ -630,30 +630,41 @@ section {
 /* ===================== */
 /* UI/UX & LEVEL DESIGN */
 /* ===================== */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 .hp-feature {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
     padding: 80px 20px;
     background: white;
 }
 
-.hp-feature-reverse {
+.hp-container-feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.hp-feature-reverse .hp-container-feature {
     flex-direction: row-reverse;
 }
 
 /* Image à gauche */
-.hp-feature-hp-feature-image {
-    flex: 0 0 45%;
+.hp-feature-image {
+    flex: 0 0 40%;
     max-height: 300px;
     overflow: hidden;
     border-radius: 8px;
     display: flex;
-    align-items: center; /* centre vertical */
+    align-items: center;
 }
 
-.hp-feature-hp-feature-image img {
+.hp-feature-image img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -661,29 +672,52 @@ section {
 }
 
 /* Barre verticale entre image et texte */
-.hp-feature-hp-feature-divider {
+.hp-feature-divider {
     width: 2px;
     background: black;
     flex-shrink: 0;
     height: 200px;
 }
 
-/* Texte à droite, titre et texte centrés verticalement */
-.hp-feature-hp-feature-text {
-    flex: 0 0 45%;
+/* Texte à droite */
+.hp-feature-text {
+    flex: 0 0 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start; /* texte commence à gauche */
+    align-items: flex-start;
 }
 
-.hp-feature-hp-feature-text h3 {
+.hp-feature-text h3 {
     font-size: 1.8rem;
     margin-bottom: 15px;
+    margin-top: 0;
 }
 
-.hp-feature-hp-feature-text p {
+.hp-feature-text p {
     line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hp-container-feature {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .hp-feature-reverse .hp-container-feature {
+        flex-direction: column;
+    }
+
+    .hp-feature-image,
+    .hp-feature-text {
+        flex: 0 0 100%;
+    }
+
+    .hp-feature-divider {
+        display: none;
+    }
 }
 
 /* ===================== */
