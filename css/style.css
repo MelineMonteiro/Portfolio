@@ -382,6 +382,10 @@ section {
     background: white;
 }
 
+.projects-section-title {
+    color: black;
+}
+
 .featured-projects {
     display: flex;
     flex-direction: column;
