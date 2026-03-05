@@ -477,11 +477,11 @@ section {
     gap: 8px;
 }
 /* ===================== */
-/* PROJETS ANNEXE - cartes modifiées */
+/* PROJETS ANNEXE - ajustements largeur et hauteur, images bien cadrées */
 /* ===================== */
 
 .projects-grid {
-    background-color: black; /* fond noir */
+    background-color: black;
     background-image:
       linear-gradient(to right, rgba(255,255,255,0.8) 0.3px, transparent 0.5px),
       linear-gradient(to bottom, rgba(255,255,255,0.8) 0.3px, transparent 0.5px);
@@ -499,19 +499,19 @@ section {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* moins large */
     gap: 25px;
 }
 
 .grid-card {
     background: white;
-    border-radius: 6px; /* coins légèrement arrondis mais principalement droits */
+    border-radius: 6px;
     overflow: hidden;
     border: 1px solid rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
     transition: transform 0.3s;
-    max-height: 350px; /* légèrement plus petites cartes */
+    max-height: 400px; /* plus long que précédemment */
 }
 
 .grid-card:hover {
@@ -520,21 +520,21 @@ section {
 
 .card-image {
     position: relative;
-    height: 140px; /* image plus petite que précédemment */
-    margin: 10px; /* encadrement autour de l'image */
+    flex: 0 0 160px; /* hauteur fixe de l'image */
+    width: 100%;
     overflow: hidden;
 }
 
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* image bien cadrée */
     display: block;
     transition: transform 0.3s;
 }
 
 .grid-card:hover .card-image img {
-    transform: scale(1.05); /* léger zoom sur l'image */
+    transform: scale(1.05); /* léger zoom au survol */
 }
 
 /* Overlay noir transparent au survol */
@@ -544,7 +544,7 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0,0,0,0.4); /* noir semi-transparent */
+    background: rgba(0,0,0,0.4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -572,7 +572,6 @@ section {
     transform: scale(1.05);
 }
 
-/* Contenu en dessous de l'image */
 .card-content {
     padding: 10px 15px 15px 15px;
     display: flex;
@@ -594,53 +593,6 @@ section {
     line-height: 1.4;
     text-align: left;
     margin-bottom: 10px;
-}
-
-/* ===================== */
-/* À PROPOS */
-/* ===================== */
-
-.about {
-    background: black;
-}
-
-.about-content {
-    max-width: 700px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.about-section-title {
-    color: white;
-    
-    text-align: left;
-}
-
-.about-decorations {
-    display: none;
-}
-
-.about-shape {
-    display: none;
-}
-
-.about-text {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 40px 20px;
-
-    background: none;      /* enlève le fond blanc */
-    border-radius: 0;      /* enlève les coins arrondis */
-    box-shadow: none;      /* enlève l’ombre */
-    border: none;          /* enlève la bordure */
-
-    position: relative;
-    z-index: 1;
-}
-
-.about-text p {
-     color: white;
-    text-align: left;
 }
 
 /* ===================== */
