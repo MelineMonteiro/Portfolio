@@ -733,7 +733,7 @@ section {
     display: inline-block;
     background: black;       /* fond noir */
     color: white;            /* texte blanc */
-    padding: 20px 36px;      /* taille du rectangle */
+    padding: 20px 40px;      /* taille du rectangle */
     font-weight: 650;
     text-decoration: none;
     border-radius: 0;      /* coins légèrement arrondis */
