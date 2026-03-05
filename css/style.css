@@ -695,7 +695,7 @@ section {
     padding: 60px 20px;
 }
 
-.hp-download .btn-download {
+.hp-download-btn-download {
     display: inline-block;
     background: black;       /* fond noir */
     color: white;            /* texte blanc */
