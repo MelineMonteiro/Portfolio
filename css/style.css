@@ -375,7 +375,7 @@ section {
 }
 
 /* ===================== */
-/* PROJETS*/
+/* PROJETS - Layout épuré uniquement */
 /* ===================== */
 
 .projects-featured {
@@ -392,111 +392,81 @@ section {
     z-index: 1;
 }
 
-.project-card.featured {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-    transition: var(--transition);
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    height: 250px;
-    border: 1px solid rgba(99, 102, 241, 0.1);
-}
-
-.project-card.featured:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 25px 60px rgba(99, 102, 241, 0.2);
-}
-
-.project-image-wrapper {
-    width: 60%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    background: #f0f0f0;
+/* Carte projet épurée */
+.project-card.featured.clean-layout {
     display: flex;
     align-items: center;
-    justify-content: center;
-    border-right: 2px solid black; /* ligne verticale noire */
+    gap: 20px; /* espace entre image, barre et texte */
+    padding: 20px 0; /* espace vertical entre les cartes */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* optionnel : séparateur entre cartes */
 }
 
-.project-card.featured img {
+/* Image à gauche */
+.project-image-wrapper {
+    flex: 0 0 40%; /* largeur de l'image */
+    position: relative;
+    overflow: hidden;
+}
+
+.project-image-wrapper img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto;
     display: block;
-    transition: var(--transition);
+    object-fit: cover;
+    transition: transform 0.3s;
 }
 
-.project-card.featured:hover img {
-    transform: scale(1.02); /* léger zoom sur l'image */
+.project-card.featured.clean-layout:hover .project-image-wrapper img {
+    transform: scale(1.02); /* léger zoom au survol */
 }
 
-.project-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
-    opacity: 0;
-    transition: var(--transition);
+/* Fine barre verticale */
+.project-divider {
+    width: 2px;
+    background-color: black;
+    flex-shrink: 0;
+    margin: 0 20px; /* espace autour de la barre */
 }
 
-.project-card.featured:hover .project-overlay {
-    opacity: 1; /* overlay subtil au survol */
-}
-
+/* Texte et bouton */
 .project-info {
-    padding: 30px;
-    width: 40%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
-}
-
-.project-badge {
-    display: none;
 }
 
 .project-info h3 {
     font-size: 1.5rem;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     color: var(--text-dark);
 }
 
 .project-info p {
-    color: var(--text-light);
-    margin-bottom: 20px;
-    line-height: 1.6;
     font-size: 0.95rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: var(--text-dark);
 }
 
-/* Bouton noir "Voir" */
+/* Bouton noir "Voir le projet" */
 .project-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     text-decoration: none;
     font-weight: 600;
-    transition: var(--transition);
-    width: fit-content;
-
-    background: black; /* fond noir */
-    color: white;      /* texte blanc */
     padding: 10px 20px;
     border-radius: 5px;
+    background: black;
+    color: white;
+    transition: all 0.3s;
 }
 
-/* Effet au survol sur le bouton */
 .project-btn:hover {
     background: #333;
     gap: 12px;
 }
-
 /* ===================== */
 /* PROJETS ANNEXE */
 /* ===================== */
