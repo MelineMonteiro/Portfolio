@@ -375,17 +375,17 @@ section {
 }
 
 /* ===================== */
-/* PROJETS */
+/* PROJETS*/
 /* ===================== */
 
 .projects-featured {
-    background: var(--bg-light);
+    background: var(--bg-light); /* fond clair de la section */
 }
 
 .featured-projects {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 40px; /* espace entre les cartes */
     max-width: 1000px;
     margin: 0 auto;
     position: relative;
@@ -419,6 +419,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-right: 2px solid black; /* ligne verticale noire */
 }
 
 .project-card.featured img {
@@ -430,7 +431,7 @@ section {
 }
 
 .project-card.featured:hover img {
-    transform: scale(1.02);
+    transform: scale(1.02); /* léger zoom sur l'image */
 }
 
 .project-overlay {
@@ -445,7 +446,7 @@ section {
 }
 
 .project-card.featured:hover .project-overlay {
-    opacity: 1;
+    opacity: 1; /* overlay subtil au survol */
 }
 
 .project-info {
@@ -474,20 +475,26 @@ section {
     font-size: 0.95rem;
 }
 
+/* Bouton noir "Voir" */
 .project-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: var(--primary);
     text-decoration: none;
     font-weight: 600;
     transition: var(--transition);
     width: fit-content;
+
+    background: black; /* fond noir */
+    color: white;      /* texte blanc */
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
+/* Effet au survol sur le bouton */
 .project-btn:hover {
+    background: #333;
     gap: 12px;
-    color: var(--primary-dark);
 }
 
 /* ===================== */
