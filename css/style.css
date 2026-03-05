@@ -446,21 +446,21 @@ section {
     color: var(--text-dark);
 }
 
-/* Bouton noir "Voir le projet" plus petit */
+/* Bouton noir "Voir le projet" taille normale */
 .project-btn {
-    display: inline-flex;
+    display: inline-flex; /* reste au format “taille du texte + padding” */
     align-items: center;
     gap: 6px;
     text-decoration: none;
     font-weight: 600;
-    padding: 6px 12px; /* moins grand que précédemment */
+    padding: 6px 12px; /* taille du bouton plus compacte */
     border-radius: 4px;
     background: black;
     color: white;
     font-size: 0.9rem;
     transition: all 0.3s;
+    width: auto; /* IMPORTANT : ne pas étendre à toute la largeur */
 }
-
 .project-btn:hover {
     background: #333;
     gap: 8px;
