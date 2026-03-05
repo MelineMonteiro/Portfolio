@@ -607,6 +607,11 @@ background-size: 25px 25px;
 
 .about-section-title {
     color: white;
+    
+    margin: 0 auto;
+    padding: 40px 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .about-decorations {
