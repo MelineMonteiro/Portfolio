@@ -21,7 +21,7 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
 document.addEventListener('click', (e) => {
     if (!e.target.closest('header')) {
         navMenu.classList.remove('active');
-        menuToggle.classList.remove('active');
+        if (menuToggle) menuToggle.classList.remove('active');
     }
 });
 
@@ -70,20 +70,43 @@ rainbowSpans.forEach((span, index) => {
     });
 });
 
-// Carousel pour les images (Level Design)
+// ===================== */
+// CAROUSEL POUR LES IMAGES (LEVEL DESIGN) - CORRIGÉ
+// ===================== */
+
 function initCarousel(containerId) {
+    console.log('Initializing carousel:', containerId);
+    
     const container = document.getElementById(containerId);
-    if (!container) return;
+    if (!container) {
+        console.log('Container not found:', containerId);
+        return;
+    }
+
+    const carouselContainer = container.closest('.carousel-container');
+    if (!carouselContainer) {
+        console.log('Carousel container not found');
+        return;
+    }
 
     const images = container.querySelectorAll('.carousel-image');
-    if (images.length === 0) return;
+    console.log('Found images:', images.length);
+    
+    if (images.length === 0) {
+        console.log('No carousel images found');
+        return;
+    }
 
     let currentIndex = 0;
 
-    const prevBtn = container.closest('.carousel-container')?.querySelector('.carousel-arrow.prev');
-    const nextBtn = container.closest('.carousel-container')?.querySelector('.carousel-arrow.next');
+    const prevBtn = carouselContainer.querySelector('.carousel-arrow.prev');
+    const nextBtn = carouselContainer.querySelector('.carousel-arrow.next');
+
+    console.log('Prev button:', prevBtn);
+    console.log('Next button:', nextBtn);
 
     function showImage(index) {
+        console.log('Showing image:', index);
         images.forEach((img, i) => {
             img.classList.remove('active');
             if (i === index) {
@@ -93,18 +116,20 @@ function initCarousel(containerId) {
     }
 
     if (prevBtn) {
-        prevBtn.addEventListener('click', (e) => {
+        prevBtn.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
+            console.log('Prev clicked');
             currentIndex = (currentIndex - 1 + images.length) % images.length;
             showImage(currentIndex);
         });
     }
 
     if (nextBtn) {
-        nextBtn.addEventListener('click', (e) => {
+        nextBtn.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
+            console.log('Next clicked');
             currentIndex = (currentIndex + 1) % images.length;
             showImage(currentIndex);
         });
@@ -112,15 +137,122 @@ function initCarousel(containerId) {
 
     // Afficher la première image
     showImage(0);
+    console.log('Carousel initialized');
 }
 
-// Initialiser les carousels pour chaque projet
+// Initialiser les carousels
 document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOMContentLoaded - initializing carousels');
     initCarousel('carousel-ld');
 });
 
-// Zoom sur les images au hover (optionnel - le CSS gère aussi)
-document.querySelectorAll('img').forEach(img => {
-    // Le CSS gère déjà le zoom avec transform: scale(1.15)
-    // On peut ajouter des comportements personnalisés ici si besoin
+// Initialiser aussi après un petit délai au cas où
+setTimeout(() => {
+    const container = document.getElementById('carousel-ld');
+    if (container && !container.querySelector('.carousel-image.active')) {
+        console.log('Retrying carousel initialization');
+        initCarousel('carousel-ld');
+    }
+}, 500);
+
+// ===================== */
+// INTERSECTION OBSERVER POUR ANIMATIONS DE SCROLL
+// ===================== */
+
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+        }
+    });
+}, observerOptions);
+
+// Observer pour les éléments qui doivent s'animer au scroll
+document.addEventListener('DOMContentLoaded', () => {
+    // Animer les textes à propos au scroll
+    const aboutTexts = document.querySelectorAll('.about-text');
+    aboutTexts.forEach(el => {
+        el.classList.add('scroll-animation');
+        observer.observe(el);
+    });
+
+    // Animer les cartes de projets au scroll
+    const projectCards = document.querySelectorAll('.project-card.featured.clean-layout');
+    projectCards.forEach(el => {
+        el.classList.add('scroll-animation');
+        observer.observe(el);
+    });
+
+    // Animer les cartes de projets annexe au scroll
+    const gridCards = document.querySelectorAll('.grid-card');
+    gridCards.forEach(el => {
+        el.classList.add('scroll-animation');
+        observer.observe(el);
+    });
+
+    // Animer les sections de features
+    const featureSections = document.querySelectorAll('.hp-container-feature');
+    featureSections.forEach(el => {
+        el.classList.add('scroll-animation');
+        observer.observe(el);
+    });
+});
+
+// ===================== */
+// IMAGE ZOOM AU HOVER - AVEC MODAL
+// ===================== */
+
+function createImageModal() {
+    // Créer le modal s'il n'existe pas
+    if (document.getElementById('imageModal')) return;
+
+    const modal = document.createElement('div');
+    modal.id = 'imageModal';
+    modal.className = 'image-modal';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img id="modalImage" src="" alt="">
+        </div>
+    `;
+    document.body.appendChild(modal);
+
+    const closeBtn = modal.querySelector('.modal-close');
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+        }
+    });
+
+    return modal;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = createImageModal();
+
+    // Ajouter le zoom à toutes les images concernées
+    const zoomImages = document.querySelectorAll(
+        '.hp-image img, .hp-feature-image img, .carousel-image, .card-image img, .project-image-wrapper img'
+    );
+
+    zoomImages.forEach(img => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = img.src;
+            modal.classList.add('active');
+        });
+    });
 });
