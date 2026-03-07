@@ -2,15 +2,27 @@
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.querySelector('.nav-menu');
 
-menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-});
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+    });
+}
 
 // Fermer le menu quand on clique sur un lien
 document.querySelectorAll('.nav-menu a').forEach(link => {
     link.addEventListener('click', () => {
         navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
     });
+});
+
+// Fermer le menu quand on clique en dehors
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('header')) {
+        navMenu.classList.remove('active');
+        menuToggle.classList.remove('active');
+    }
 });
 
 // Smooth scroll pour les liens internes
@@ -31,22 +43,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const rainbowSpans = document.querySelectorAll('.rainbow-name span');
 
 rainbowSpans.forEach((span, index) => {
-    // Ignorer les espaces et les sauts de ligne
+    // Marquer les espaces
     if (span.textContent === ' ' || span.textContent === '\n') {
         span.classList.add('space');
-        return;
     }
+});
 
+rainbowSpans.forEach((span, index) => {
     span.addEventListener('mouseenter', function () {
+        if (this.classList.contains('space')) return;
+
         // Créer l'effet vague en cascade
         rainbowSpans.forEach((s, i) => {
             // Ne pas appliquer l'effet aux espaces
-            if (s.textContent === ' ' || s.textContent === '\n') return;
+            if (s.classList.contains('space')) return;
 
             const delay = Math.abs(i - index) * 50;
             setTimeout(() => {
                 s.style.animation = 'wave-up 0.5s ease';
-                s.style.animationDelay = '0s';
                 // Reset après animation
                 setTimeout(() => {
                     s.style.animation = 'none';
@@ -66,8 +80,8 @@ function initCarousel(containerId) {
 
     let currentIndex = 0;
 
-    const prevBtn = container.querySelector('.carousel-arrow.prev');
-    const nextBtn = container.querySelector('.carousel-arrow.next');
+    const prevBtn = container.closest('.carousel-container')?.querySelector('.carousel-arrow.prev');
+    const nextBtn = container.closest('.carousel-container')?.querySelector('.carousel-arrow.next');
 
     function showImage(index) {
         images.forEach((img, i) => {
@@ -79,14 +93,18 @@ function initCarousel(containerId) {
     }
 
     if (prevBtn) {
-        prevBtn.addEventListener('click', () => {
+        prevBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             currentIndex = (currentIndex - 1 + images.length) % images.length;
             showImage(currentIndex);
         });
     }
 
     if (nextBtn) {
-        nextBtn.addEventListener('click', () => {
+        nextBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
             currentIndex = (currentIndex + 1) % images.length;
             showImage(currentIndex);
         });
@@ -99,4 +117,10 @@ function initCarousel(containerId) {
 // Initialiser les carousels pour chaque projet
 document.addEventListener('DOMContentLoaded', () => {
     initCarousel('carousel-ld');
+});
+
+// Zoom sur les images au hover (optionnel - le CSS gère aussi)
+document.querySelectorAll('img').forEach(img => {
+    // Le CSS gère déjà le zoom avec transform: scale(1.15)
+    // On peut ajouter des comportements personnalisés ici si besoin
 });
