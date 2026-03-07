@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <title>Dark Souls</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- CSS CORRIGÉ -->
     <link rel="stylesheet" href="../css/style.css">
-
-    <!-- ICONES -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -23,7 +19,6 @@
         <a href="../index.html#about">À propos</a>
         <a href="../index.html#contact">Contact</a>
     </nav>
-
     <button class="menu-toggle" id="menuToggle">
         <span></span>
         <span></span>
@@ -31,38 +26,29 @@
     </button>
 </header>
 
-<!-- HERO (même style que la home) -->
-<section class="hero">
-    <div class="hero-content">
-
-        <div class="profile-image">
+<!-- HERO -->
+<section class="hp-hero">
+    <div class="hp-container">
+        <div class="hp-image">
             <img src="../Images/Dark Souls.png" alt="Dark Souls">
         </div>
-
-        <div class="hero-text">
+        <div class="hp-info">
             <h1 class="rainbow-name">
-    <span>D</span><span>a</span><span>r</span><span>k</span>
-    <span> </span>
-    <span>S</span><span>o</span><span>u</span><span>l</span><span>s</span>
-</h1>
-
+                <span>D</span><span>a</span><span>r</span><span>k</span>
+                <span> </span>
+                <span>S</span><span>o</span><span>u</span><span>l</span><span>s</span>
+            </h1>
             <p class="subtitle">Level Design</p>
-
-            
         </div>
-
     </div>
 </section>
 
-<!-- CONTENU -->
-<!-- CONTEXTE + SYNOPSIS -->
+<!-- CONTEXTE -->
 <section class="hp-description">
     <div class="container">
         <h2>Contexte</h2>
-        <p>Ce projet a été réalisé dans le cadre d’un devoir de level design en première année de game design.
-L’objectif était d’inventer un niveau pour Dark Souls III en respectant les codes et les mécaniques du jeu.</p>
-
-        
+        <p>Ce projet a été réalisé dans le cadre d'un devoir de level design en première année de game design.
+L'objectif était d'inventer un niveau pour Dark Souls III en respectant les codes et les mécaniques du jeu.</p>
     </div>
 </section>
 
@@ -70,49 +56,48 @@ L’objectif était d’inventer un niveau pour Dark Souls III en respectant les
 <section class="hp-realisation">
     <div class="container">
         <h2>Réalisation</h2>
-        
     </div>
 </section>
 
 <!-- LEVEL DESIGN -->
 <section class="hp-feature hp-feature-reverse">
-    <div class="container hp-container-feature">
-        <div class="hp-feature-image">
+    <div class="hp-container-feature">
+        <div class="hp-feature-image" style="max-height: none; overflow: visible;">
             <img src="https://raw.githubusercontent.com/MelineMonteiro/Portfolio/main/Images/GD1_Monteiro_Meline_Schema.jpg" alt="Level Design">
         </div>
         <div class="hp-feature-divider"></div>
         <div class="hp-feature-text">
             <h3>Level Design</h3>
-            <p>Tout d’abord, je me suis renseigné sur le jeu et sur la composition de ses niveaux afin de comprendre comment ils étaient construits, ainsi que le nombre et les types d’ennemis qu’ils comportaient.
+            <p>Tout d'abord, je me suis renseigné sur le jeu et sur la composition de ses niveaux afin de comprendre comment ils étaient construits, ainsi que le nombre et les types d'ennemis qu'ils comportaient.
 
-Avec ces éléments, j’ai pu établir le contexte de ma zone et définir les chemins intéressants, comme le golden path.
+Avec ces éléments, j'ai pu établir le contexte de ma zone et définir les chemins intéressants, comme le golden path.
 
-J’ai ensuite créé plusieurs schémas pour concevoir progressivement les différents éléments de ma zone.
+J'ai ensuite créé plusieurs schémas pour concevoir progressivement les différents éléments de ma zone.
 
-Enfin, j’ai sélectionné les éléments à conserver et ceux à retirer afin de réaliser le schéma définitif.​​
-        ​Une fois les schémas réalisés, j’ai construit le niveau sur Unreal Engine en l’ajustant au fur et à mesure des tests, en agrandissant ou en rétrécissant certaines zones et en replaçant les ennemis selon les besoins du gameplay.</p>
- ​Une fois les schémas réalisés, j’ai construit le niveau sur Unreal Engine en l’ajustant au fur et à mesure des tests, en agrandissant ou en rétrécissant certaines zones et en replaçant les ennemis selon les besoins du gameplay.
-
+Enfin, j'ai sélectionné les éléments à conserver et ceux à retirer afin de réaliser le schéma définitif.​​
+Une fois les schémas réalisés, j'ai construit le niveau sur Unreal Engine en l'ajustant au fur et à mesure des tests, en agrandissant ou en rétrécissant certaines zones et en replaçant les ennemis selon les besoins du gameplay.
+            </p>
         </div>
     </div>
 </section>
 
-
-
 <!-- BOUTON TÉLÉCHARGER -->
 <section class="hp-download">
     <div class="container">
-        <a href="downloads/gruik-vixen.zip" class="hp-download-btn-download ">Télécharger</a>
+        <a href="downloads/dark-souls.zip" class="hp-download-btn-download">
+            <i class="fas fa-download"></i>
+            Télécharger
+        </a>
     </div>
 </section>
 
 <!-- SÉPARATEUR QUADRILLÉ -->
 <section class="hp-grid-separator"></section>
 
+<!-- CONTACT -->
 <section class="contact">
     <div class="container">
-        <h2 class="section-title">Me Contacter</h2>
-        
+        <h2 class="contact-section-title">Me Contacter</h2>
         <div class="contact-content">
             <a href="mailto:meline@email.com" class="contact-link">
                 <div class="contact-icon">
@@ -120,14 +105,12 @@ Enfin, j’ai sélectionné les éléments à conserver et ceux à retirer afin 
                 </div>
                 <span>meline@email.com</span>
             </a>
-
             <a href="https://linkedin.com/in/meline" target="_blank" class="contact-link">
                 <div class="contact-icon">
                     <i class="fas fa-linkedin"></i>
                 </div>
                 <span>LinkedIn</span>
             </a>
-
             <a href="https://meline.itch.io" target="_blank" class="contact-link">
                 <div class="contact-icon">
                     <i class="fas fa-gamepad"></i>
@@ -135,13 +118,9 @@ Enfin, j’ai sélectionné les éléments à conserver et ceux à retirer afin 
                 <span>itch.io</span>
             </a>
         </div>
-
-       
-
     </div>
 </section>
-<!-- JS CORRIGÉ -->
-<script src="../js/script.js"></script>
 
+<script src="../js/script.js"></script>
 </body>
 </html>
