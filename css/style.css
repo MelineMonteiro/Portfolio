@@ -36,8 +36,6 @@ html {
     font-style: normal;
 }
 
-
-
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: white;
@@ -71,7 +69,6 @@ header {
 }
 
 .logo {
-   
     font-weight: 700;
     font-size: 1.8rem;
     background: black;
@@ -141,16 +138,12 @@ header {
     align-items: center;
     justify-content: center;
     padding: 40px 20px;
-   /* quadrillage */
     background-image:
         linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
         linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
-
     background-size: 25px 25px;
-
     position: relative;
     overflow: hidden;
-
 }
 
 .hero-decorations {
@@ -176,16 +169,13 @@ header {
     max-width: 350px;
     border-radius: 20px;
     object-fit: cover;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     transition: var(--transition);
     position: relative;
     z-index: 2;
-    border: 3px solid rgba(99, 102, 241, 0.1);
 }
 
 .profile-image img:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 30px 80px rgba(99, 102, 241, 0.25);
 }
 
 .hero-content {
@@ -233,7 +223,6 @@ header {
 /* ===================== */
 
 .rainbow-name {
-    
     display: inline-block;
     font-size: clamp(2.5rem, 8vw, 4.5rem);
     font-weight: 800;
@@ -248,17 +237,18 @@ header {
     cursor: pointer;
 }
 
-.rainbow-name span:not(:nth-child(7)):hover {
+.rainbow-name span:not(.space):hover {
     animation: wave-up 0.5s ease;
 }
 
-/* Couleurs rainbow au survol */
+/* Couleurs rainbow au survol - 15 couleurs pour couvrir les longs textes */
 .rainbow-name span:nth-child(1):hover { color: #ff0000; }
 .rainbow-name span:nth-child(2):hover { color: #ff7f00; }
 .rainbow-name span:nth-child(3):hover { color: #ffff00; }
 .rainbow-name span:nth-child(4):hover { color: #00ff00; }
 .rainbow-name span:nth-child(5):hover { color: #0000ff; }
 .rainbow-name span:nth-child(6):hover { color: #4b0082; }
+.rainbow-name span:nth-child(7):hover { color: #9400d3; }
 .rainbow-name span:nth-child(8):hover { color: #ff0000; }
 .rainbow-name span:nth-child(9):hover { color: #ff7f00; }
 .rainbow-name span:nth-child(10):hover { color: #ffff00; }
@@ -267,6 +257,12 @@ header {
 .rainbow-name span:nth-child(13):hover { color: #4b0082; }
 .rainbow-name span:nth-child(14):hover { color: #9400d3; }
 .rainbow-name span:nth-child(15):hover { color: #ff0000; }
+.rainbow-name span:nth-child(16):hover { color: #ff7f00; }
+.rainbow-name span:nth-child(17):hover { color: #ffff00; }
+.rainbow-name span:nth-child(18):hover { color: #00ff00; }
+.rainbow-name span:nth-child(19):hover { color: #0000ff; }
+.rainbow-name span:nth-child(20):hover { color: #4b0082; }
+.rainbow-name span:nth-child(21):hover { color: #9400d3; }
 
 @keyframes wave-up {
     0% {
@@ -374,8 +370,6 @@ section {
     display: none;
 }
 
-
-
 /* SECTION A PROPOS */
 
 .about {
@@ -391,8 +385,6 @@ section {
     text-align: center;
 }
 
-/* TITRE */
-
 .about-section-title {
     color: white;
     font-size: 2.8rem;
@@ -400,24 +392,32 @@ section {
     margin-bottom: 40px;
 }
 
-/* CONTENU */
-
 .about-content {
     display: flex;
     justify-content: center;
 }
 
-/* TEXTE */
-
 .about-text {
     max-width: 700px;
-    text-align: left; /* texte commence à gauche */
+    text-align: left;
+    animation: slideFromLeft 0.8s ease-out;
 }
 
 .about-text p {
     color: white;
     font-size: 1.1rem;
     line-height: 1.7;
+}
+
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 /* ===================== */
@@ -442,23 +442,33 @@ section {
 .featured-projects {
     display: flex;
     flex-direction: column;
-    gap: 40px; /* espace entre les cartes */
+    gap: 40px;
     max-width: 1000px;
     margin: 0 auto;
 }
 
-/* Carte projet épurée */
 .project-card.featured.clean-layout {
     display: flex;
-    align-items: stretch; /* pour que barre et image prennent toute la hauteur */
-    gap: 20px; /* espace entre image, barre et texte */
-    padding: 20px 0; /* espace vertical entre les cartes */
+    align-items: stretch;
+    gap: 20px;
+    padding: 20px 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    animation: slideFromRight 0.8s ease-out;
 }
 
-/* Image à gauche */
+@keyframes slideFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .project-image-wrapper {
-    flex: 0 0 40%; /* largeur de l'image */
+    flex: 0 0 40%;
     position: relative;
     overflow: hidden;
 }
@@ -475,14 +485,12 @@ section {
     transform: scale(1.02);
 }
 
-/* Fine barre verticale entre image et texte */
 .project-divider {
     width: 2px;
     background-color: black;
     flex-shrink: 0;
 }
 
-/* Texte et bouton */
 .project-info {
     flex: 1;
     display: flex;
@@ -504,20 +512,21 @@ section {
 }
 
 .project-btn {
-    display: inline-flex;      /* taille du contenu + padding */
-    width: auto !important;    /* empêche toute expansion */
-    max-width: fit-content;    /* sécurise la largeur max */
+    display: inline-flex;
+    width: auto !important;
+    max-width: fit-content;
     align-items: center;
     gap: 6px;
     text-decoration: none;
     font-weight: 600;
-    padding: 6px 12px;         /* petite taille */
+    padding: 6px 12px;
     border-radius: 4px;
     background: black;
     color: white;
     font-size: 0.9rem;
     transition: all 0.3s;
 }
+
 .project-btn:hover {
     background: #333;
     gap: 8px;
@@ -545,15 +554,13 @@ section {
     flex-wrap: wrap;
 }
 
-/* Image à gauche plus petite */
 .hp-image {
-    flex: 0 0 35%; /* plus petite */
-    max-height: 400px; /* limitation hauteur */
+    flex: 0 0 35%;
+    max-height: 400px;
     overflow: hidden;
     border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
     display: flex;
-    align-items: center; /* centre vertical */
+    align-items: center;
 }
 
 .hp-image img {
@@ -568,7 +575,6 @@ section {
     transform: scale(1.02);
 }
 
-/* Texte à droite centré verticalement */
 .hp-info {
     flex: 0 0 55%;
     display: flex;
@@ -627,6 +633,13 @@ section {
     margin-bottom: 40px;
 }
 
+.hp-realisation-text {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.8;
+}
+
 /* ===================== */
 /* UI/UX & LEVEL DESIGN */
 /* ===================== */
@@ -648,16 +661,17 @@ section {
     align-items: center;
     justify-content: center;
     gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .hp-feature-reverse .hp-container-feature {
     flex-direction: row-reverse;
 }
 
-/* Image à gauche */
 .hp-feature-image {
     flex: 0 0 40%;
-    max-height: 300px;
+    position: relative;
     overflow: hidden;
     border-radius: 8px;
     display: flex;
@@ -667,11 +681,57 @@ section {
 .hp-feature-image img {
     width: 100%;
     height: auto;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 
-/* Barre verticale entre image et texte */
+/* Carousel controls */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+    z-index: 10;
+}
+
+.carousel-arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-arrow.prev {
+    left: 10px;
+}
+
+.carousel-arrow.next {
+    right: 10px;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: none;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
 .hp-feature-divider {
     width: 2px;
     background: black;
@@ -679,7 +739,6 @@ section {
     height: 250px;
 }
 
-/* Texte à droite */
 .hp-feature-text {
     flex: 0 0 40%;
     display: flex;
@@ -699,27 +758,6 @@ section {
     margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .hp-container-feature {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .hp-feature-reverse .hp-container-feature {
-        flex-direction: column;
-    }
-
-    .hp-feature-image,
-    .hp-feature-text {
-        flex: 0 0 100%;
-    }
-
-    .hp-feature-divider {
-        display: none;
-    }
-}
-
 /* ===================== */
 /* BOUTON TELECHARGER RECTANGLE NOIR */
 /* ===================== */
@@ -730,21 +768,31 @@ section {
 }
 
 .hp-download-btn-download {
-    display: inline-block;
-    background: black;       /* fond noir */
-    color: white;            /* texte blanc */
-    padding: 20px 40px;      /* taille du rectangle */
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: black;
+    color: white;
+    padding: 20px 40px;
     font-weight: 650;
     text-decoration: none;
-    border-radius: 0;      /* coins légèrement arrondis */
+    border-radius: 0;
     transition: all 0.3s;
     font-size: 1rem;
+    border: none;
+    cursor: pointer;
 }
 
 .hp-download-btn-download:hover {
-    background: #333;        /* foncé au survol */
-    color: white;            /* texte reste blanc */
+    background: #333;
+    color: white;
+    gap: 15px;
 }
+
+.hp-download-btn-download i {
+    font-size: 1.1rem;
+}
+
 /* ===================== */
 /* SEPARATEUR QUADRILLAGE */
 .hp-grid-separator {
@@ -756,29 +804,6 @@ section {
     background-size: 25px 25px;
 }
 
-/* ===================== */
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .hp-container, .hp-feature {
-        flex-direction: column;
-        gap: 30px;
-    }
-    .hp-image, .hp-info, .hp-feature .hp-feature-image, .hp-feature .hp-feature-text {
-        width: 100%;
-    }
-    .hp-feature-divider {
-        display: none;
-    }
-}
-
-@media (max-width: 480px) {
-    .hp-info h1 {
-        font-size: 2rem;
-    }
-    .hp-info h2 {
-        font-size: 1rem;
-    }
-}
 /* ===================== */
 /* PROJETS ANNEXE */
 /* ===================== */
@@ -800,15 +825,16 @@ section {
     color: white;
 }
 
-/* cartes un peu plus larges */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 230px));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
     justify-content: center;
-    gap: 30px;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* cartes un peu plus grandes mais moins longues */
 .grid-card {
     background: white;
     border-radius: 0;
@@ -817,19 +843,30 @@ section {
     display: flex;
     flex-direction: column;
     transition: transform 0.3s;
-    min-height: 380px;
+    min-height: 420px;
+    animation: slideFromBottom 0.8s ease-out;
+}
+
+@keyframes slideFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .grid-card:hover {
     transform: translateY(-5px);
 }
 
-/* image un peu plus grande */
 .card-image {
     position: relative;
-    height: 160px;
+    height: 200px;
     width: 100%;
-    padding: 12px; /* cadre blanc */
+    padding: 12px;
     box-sizing: border-box;
 }
 
@@ -840,7 +877,6 @@ section {
     display: block;
 }
 
-/* overlay noir transparent */
 .card-overlay {
     position: absolute;
     top: 12px;
@@ -874,33 +910,34 @@ section {
     color: black;
 }
 
-/* contenu */
 .card-content {
-    padding: 14px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     flex: 1;
 }
 
 .card-content h3 {
-    font-size: 1.05rem;
-    margin-bottom: 6px;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
     text-align: left;
     color: black;
+    font-weight: 700;
 }
 
 .card-content p {
     color: #333;
-    font-size: 0.85rem;
-    line-height: 1.4;
+    font-size: 0.95rem;
+    line-height: 1.5;
     text-align: left;
 }
+
 /* ===================== */
 /* CONTACT */
 /* ===================== */
 
 .contact {
-    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%); /* bande blanche avec léger dégradé */
+    background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
     color: black;
     position: relative;
     overflow: hidden;
@@ -916,20 +953,22 @@ section {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-
 }
 
 .contact-content {
     display: flex;
-    justify-content: center; /* centrer horizontalement */
+    justify-content: center;
     align-items: center;
     gap: 60px;
     flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .contact-link {
     display: flex;
-    flex-direction: row; /* icône à gauche du texte */
+    flex-direction: row;
     align-items: center;
     gap: 12px;
     color: black;
@@ -942,7 +981,7 @@ section {
 .contact-icon {
     width: 40px;
     height: 40px;
-    background: #d9d9d9; /* gris clair */
+    background: #d9d9d9;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -964,6 +1003,7 @@ section {
     transform: translateX(5px);
     color: black;
 }
+
 /* ===================== */
 /* FOOTER */
 /* ===================== */
@@ -1007,6 +1047,32 @@ footer {
 
     .contact-content {
         gap: 40px;
+    }
+
+    .hp-container-feature {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hp-feature-reverse .hp-container-feature {
+        flex-direction: column;
+    }
+
+    .hp-feature-image {
+        flex: 0 0 100%;
+    }
+
+    .hp-feature-text {
+        flex: 0 0 100%;
+    }
+
+    .hp-feature-divider {
+        display: none;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+        gap: 30px;
     }
 }
 
@@ -1081,6 +1147,19 @@ footer {
     .rainbow-name {
         white-space: normal;
     }
+
+    .hp-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .hp-image {
+        flex: 0 0 100%;
+    }
+
+    .hp-info {
+        flex: 0 0 100%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1153,5 +1232,14 @@ footer {
 
     .contact-content {
         gap: 20px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hp-download-btn-download {
+        width: 100%;
+        justify-content: center;
     }
 }
