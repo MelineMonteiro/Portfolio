@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <title>Gruik and Vixen</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- CSS CORRIGÉ -->
     <link rel="stylesheet" href="../css/style.css">
-
-    <!-- ICONES -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -23,7 +19,6 @@
         <a href="../index.html#about">À propos</a>
         <a href="../index.html#contact">Contact</a>
     </nav>
-
     <button class="menu-toggle" id="menuToggle">
         <span></span>
         <span></span>
@@ -32,28 +27,21 @@
 </header>
 
 <!-- HERO PROJET -->
-<section class="hero">
-    <div class="hero-content">
-
-        <div class="profile-image">
+<section class="hp-hero">
+    <div class="hp-container">
+        <div class="hp-image">
             <img src="../Images/Gruik.gif" alt="Gruik and Vixen">
         </div>
-
-        <div class="hero-text">
+        <div class="hp-info">
             <h1 class="rainbow-name">
-    <span>G</span><span>r</span><span>u</span><span>i</span><span>k</span>
-    <span> </span>
-    <span>a</span><span>n</span><span>d</span>
-    <span> </span>
-    <span>V</span><span>i</span><span>x</span><span>e</span><span>n</span>
-   
-</h1>
-
+                <span>G</span><span>r</span><span>u</span><span>i</span><span>k</span>
+                <span> </span>
+                <span>a</span><span>n</span><span>d</span>
+                <span> </span>
+                <span>V</span><span>i</span><span>x</span><span>e</span><span>n</span>
+            </h1>
             <p class="subtitle">Caravan Shooter</p>
-
-            
         </div>
-
     </div>
 </section>
 
@@ -61,10 +49,10 @@
 <section class="hp-description">
     <div class="container">
         <h2>Contexte</h2>
-        <p>Ce projet a été réalisé dans le cadre d’une game jam sur itch.io, intitulée Caravan Jam. Comme son nom l’indique, le thème imposé consistait à créer un caravan shooter. Les contraintes étaient relativement limitées : le jeu devait simplement proposer un niveau d’une durée comprise entre 2 et 5 minutes. Nous avons développé ce projet en deux semaines, en binôme.</p>
+        <p>Ce projet a été réalisé dans le cadre d'une game jam sur itch.io, intitulée Caravan Jam. Comme son nom l'indique, le thème imposé consistait à créer un caravan shooter. Les contraintes étaient relativement limitées : le jeu devait simplement proposer un niveau d'une durée comprise entre 2 et 5 minutes. Nous avons développé ce projet en deux semaines, en binôme.</p>
 
         <h2>Synopsis</h2>
-        <p>Dans Vixen & Gruik, le joueur contrôle à la fois le renard capable de tirer et la tirelire-cochon qui stocke le score. L’objectif est de récolter un maximum de pièces en éliminant les poules enragées tout en protégeant la tirelire pour éviter qu’elle ne les perde… le tout sans mélanger ses contrôles !</p>
+        <p>Dans Vixen & Gruik, le joueur contrôle à la fois le renard capable de tirer et la tirelire-cochon qui stocke le score. L'objectif est de récolter un maximum de pièces en éliminant les poules enragées tout en protégeant la tirelire pour éviter qu'elle ne les perde… le tout sans mélanger ses contrôles !</p>
     </div>
 </section>
 
@@ -72,59 +60,69 @@
 <section class="hp-realisation">
     <div class="container">
         <h2>Réalisation</h2>
-        <p>Nous avons commencé par réfléchir puis concevoir le gameplay en imaginant un jeu où deux personnages sont contrôlés simultanément.
-Vixen, un renard cupide, est le tireur. Il élimine les ennemis pour protéger Gruik. Lorsqu’il est touché, il est temporairement ralenti et ne peut plus tirer pendant un court moment. Il se contrôle avec Z, Q, D, et saute avec la barre d’espace.
-Gruik est une tirelire-cochon volante chargée de stocker le butin récupéré par Vixen. S’il subit des dégâts, il perd une partie de l’argent accumulé. Il se contrôle avec les flèches directionnelles.
+        <div class="hp-realisation-text">
+            <p>Nous avons commencé par réfléchir puis concevoir le gameplay en imaginant un jeu où deux personnages sont contrôlés simultanément.
+Vixen, un renard cupide, est le tireur. Il élimine les ennemis pour protéger Gruik. Lorsqu'il est touché, il est temporairement ralenti et ne peut plus tirer pendant un court moment. Il se contrôle avec Z, Q, D, et saute avec la barre d'espace.
+Gruik est une tirelire-cochon volante chargée de stocker le butin récupéré par Vixen. S'il subit des dégâts, il perd une partie de l'argent accumulé. Il se contrôle avec les flèches directionnelles.
 Les ennemis sont des poules, réparties en deux types: les Brawlers qui foncent sur Gruik pour lui infliger des dégâts au contact et les Shooters qui tirent des œufs projectiles et peuvent cibler Vixen ou Gruik.
 
 Pour le jeu nous nous sommes inspirés de Darius et de Final Soldier.
-</p>
+            </p>
+        </div>
     </div>
 </section>
 
 <!-- UI/UX -->
 <section class="hp-feature">
-    <div class="container hp-container-feature">
+    <div class="hp-container-feature">
         <div class="hp-feature-image">
-            <img src="https://raw.githubusercontent.com/MelineMonteiro/Portfolio/main/Images/Gruik and Vixen UI.png" alt="UI/UX">
+            <img src="https://raw.githubusercontent.com/MelineMonteiro/Portfolio/main/Images/Gruik%20and%20Vixen%20UI.png" alt="UI/UX">
         </div>
         <div class="hp-feature-divider"></div>
         <div class="hp-feature-text">
             <h3>UI / UX</h3>
-            <p>L’élément le plus important à transmettre au joueur est le nombre de pièces qu’il a réussi à collecter. Pour garantir une bonne lisibilité, ce score est affiché en bas à gauche de l’écran, un emplacement qui permet de le voir facilement sans gêner la visibilité du niveau.
-Les menus, quant à eux, ont été pensés pour être simples et compréhensibles. Leur objectif est de permettre au joueur d’accéder rapidement au jeu ou de retourner facilement au menu principal, sans surcharge visuelle.
-</p>
+            <p>L'élément le plus important à transmettre au joueur est le nombre de pièces qu'il a réussi à collecter. Pour garantir une bonne lisibilité, ce score est affiché en bas à gauche de l'écran, un emplacement qui permet de le voir facilement sans gêner la visibilité du niveau.
+Les menus, quant à eux, ont été pensés pour être simples et compréhensibles. Leur objectif est de permettre au joueur d'accéder rapidement au jeu ou de retourner facilement au menu principal, sans surcharge visuelle.
+            </p>
         </div>
     </div>
 </section>
 
-<!-- LEVEL DESIGN -->
+<!-- LEVEL DESIGN avec Carousel -->
 <section class="hp-feature hp-feature-reverse">
-    <div class="container hp-container-feature">
-        <div class="hp-feature-image">
-            <img src="https://raw.githubusercontent.com/MelineMonteiro/Portfolio/main/Images/Gruik and Vixen.png" alt="Level Design">
+    <div class="hp-container-feature">
+        <div class="carousel-container">
+            <button class="carousel-arrow prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div id="carousel-ld" class="hp-feature-image" style="position: relative;">
+                <img src="https://raw.githubusercontent.com/MelineMonteiro/Portfolio/main/Images/Level%20Design%201.png" alt="Level Design 1" class="carousel-image active">
+                <img src="https://raw.githubusercontent.com/MelineMonteiro/Portfolio/main/Images/Level%20Design%202.png" alt="Level Design 2" class="carousel-image">
+                <img src="https://raw.githubusercontent.com/MelineMonteiro/Portfolio/main/Images/Level%20Design%203.png" alt="Level Design 3" class="carousel-image">
+            </div>
+            <button class="carousel-arrow next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
         </div>
         <div class="hp-feature-divider"></div>
         <div class="hp-feature-text">
             <h3>Level Design</h3>
-            <p>Le niveau dure environ 2 minutes et a été conçu pour que l’intensité augmente progressivement tout comme le nombre d’ennemis, tandis que les zones de protection disparaissent petit à petit.
-Le jeu est un side-scroller forcé, à la manière de Geometry Dash. Au début, les ennemis les plus simples apparaissent en faible quantité pour permettre au joueur de prendre en main les contrôles. La première partie du niveau est même vide d’ennemis pour faciliter l’adaptation. Durant la première moitié, Gruik peut se protéger grâce à des éléments de décor, qui disparaissent progressivement pour rendre la fin du niveau plus intense.
-Les ennemis apparaissent zone par zone afin d’avoir un rythme fluide.
-</p>
-
-          
+            <p>Le niveau dure environ 2 minutes et a été conçu pour que l'intensité augmente progressivement tout comme le nombre d'ennemis, tandis que les zones de protection disparaissent petit à petit.
+Le jeu est un side-scroller forcé, à la manière de Geometry Dash. Au début, les ennemis les plus simples apparaissent en faible quantité pour permettre au joueur de prendre en main les contrôles. La première partie du niveau est même vide d'ennemis pour faciliter l'adaptation.
+Durant la première moitié, Gruik peut se protéger grâce à des éléments de décor, qui disparaissent progressivement pour rendre la fin du niveau plus intense.
+Les ennemis apparaissent zone par zone afin d'avoir un rythme fluide.
+            </p>
         </div>
-          
     </div>
- 
 </section>
-
-
 
 <!-- BOUTON TÉLÉCHARGER -->
 <section class="hp-download">
     <div class="container">
-        <a href="downloads/gruik-vixen.zip" class="hp-download-btn-download ">Télécharger</a>
+        <a href="downloads/gruik-vixen.zip" class="hp-download-btn-download">
+            <i class="fas fa-download"></i>
+            Télécharger
+        </a>
     </div>
 </section>
 
@@ -157,3 +155,7 @@ Les ennemis apparaissent zone par zone afin d’avoir un rythme fluide.
         </div>
     </div>
 </section>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
