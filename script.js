@@ -39,36 +39,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Effet vague amélioré au survol du nom - gère les longs textes et espaces
-const rainbowSpans = document.querySelectorAll('.rainbow-name span');
 
-rainbowSpans.forEach((span, index) => {
-    // Marquer les espaces
-    if (span.textContent === ' ' || span.textContent === '\n') {
-        span.classList.add('space');
-    }
-});
-
-rainbowSpans.forEach((span, index) => {
-    span.addEventListener('mouseenter', function () {
-        if (this.classList.contains('space')) return;
-
-        // Créer l'effet vague en cascade
-        rainbowSpans.forEach((s, i) => {
-            // Ne pas appliquer l'effet aux espaces
-            if (s.classList.contains('space')) return;
-
-            const delay = Math.abs(i - index) * 50;
-            setTimeout(() => {
-                s.style.animation = 'wave-up 0.5s ease';
-                // Reset après animation
-                setTimeout(() => {
-                    s.style.animation = 'none';
-                }, 500);
-            }, delay);
-        });
-    });
-});
 
 // ===================== */
 // CAROUSEL POUR LES IMAGES (LEVEL DESIGN) - CORRIGÉ
