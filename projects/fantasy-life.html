@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <title>Fantasy Life</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- CSS CORRIGÉ -->
     <link rel="stylesheet" href="../css/style.css">
-
-    <!-- ICONES -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -23,7 +19,6 @@
         <a href="../index.html#about">À propos</a>
         <a href="../index.html#contact">Contact</a>
     </nav>
-
     <button class="menu-toggle" id="menuToggle">
         <span></span>
         <span></span>
@@ -31,41 +26,32 @@
     </button>
 </header>
 
-<!-- HERO (même style que la home) -->
-<section class="hero">
-    <div class="hero-content">
-
-        <div class="profile-image">
+<!-- HERO -->
+<section class="hp-hero">
+    <div class="hp-container">
+        <div class="hp-image">
             <img src="../Images/FANTASY lIFE.png" alt="Fantasy Life">
         </div>
-
-        <div class="hero-text">
+        <div class="hp-info">
             <h1 class="rainbow-name">
-    <span>F</span><span>a</span><span>n</span><span>t</span><span>a</span><span>s</span><span>y</span>
-    <span> </span>
-    <span>L</span><span>i</span><span>f</span><span>e</span>
-</h1>
-
+                <span>F</span><span>a</span><span>n</span><span>t</span><span>a</span><span>s</span><span>y</span>
+                <span> </span>
+                <span>L</span><span>i</span><span>f</span><span>e</span>
+            </h1>
             <p class="subtitle">Free-to-play</p>
-
-            
         </div>
-
     </div>
 </section>
 
-<!-- CONTENU -->
-<!-- CONTEXTE + SYNOPSIS -->
+<!-- CONTEXTE -->
 <section class="hp-description">
     <div class="container">
         <h2>Contexte</h2>
-        <p>Ce document a été réalisé dans le cadre d’un devoir de deuxième année en game design.
+        <p>Ce document a été réalisé dans le cadre d'un devoir de deuxième année en game design.
 
-Les consignes consistaient à choisir un jeu qui n’était pas initialement en free-to-play et à le transformer en free-to-play à travers un système de micro-transactions respectant l’univers du jeu.
+Les consignes consistaient à choisir un jeu qui n'était pas initialement en free-to-play et à le transformer en free-to-play à travers un système de micro-transactions respectant l'univers du jeu.
 
-Nous disposions d’un mois pour réaliser ce document.</p>
-
-        
+Nous disposions d'un mois pour réaliser ce document.</p>
     </div>
 </section>
 
@@ -73,28 +59,32 @@ Nous disposions d’un mois pour réaliser ce document.</p>
 <section class="hp-realisation">
     <div class="container">
         <h2>Réalisation</h2>
-        <p>Pour réaliser ce projet, j’ai d’abord commencé par identifier les éléments clés du jeu pouvant être exploités dans une logique de free-to-play. L’univers du jeu est vaste et riche, avec de nombreux objets à gagner ainsi qu’une dimension multijoueur qui favorise le jeu entre amis. Le gameplay repose sur l’exploration et les combats contre des ennemis de plus en plus puissants, permettant au joueur de gagner progressivement de l’expérience et de l’argent.
-À partir de cette analyse, j’ai ensuite travaillé sur un nouvel équilibrage des gains d’argent et d’expérience afin d’encourager l’utilisation de boutiques en jeu. J’ai également imaginé la mise en place d’événements et de festivals temporaires permettant d’obtenir de nouveaux objets, de développer le lore du jeu et de favoriser une connexion régulière des joueurs.
-Enfin, en m’appuyant sur l’histoire principale, j’ai proposé la création de tickets scénario qui donnent accès à des scènes secrètes. Ces éléments permettent d’approfondir la narration et d’immerger davantage le joueur dans l’univers du jeu.
-</p>
+        <div class="hp-realisation-text">
+            <p>Pour réaliser ce projet, j'ai d'abord commencé par identifier les éléments clés du jeu pouvant être exploités dans une logique de free-to-play. L'univers du jeu est vaste et riche, avec de nombreux objets à gagner ainsi qu'une dimension multijoueur qui favorise le jeu entre amis. Le gameplay repose sur l'exploration et les combats contre des ennemis de plus en plus puissants, permettant au joueur de gagner progressivement de l'expérience et de l'argent.
+À partir de cette analyse, j'ai ensuite travaillé sur un nouvel équilibrage des gains d'argent et d'expérience afin d'encourager l'utilisation de boutiques en jeu. J'ai également imaginé la mise en place d'événements et de festivals temporaires permettant d'obtenir de nouveaux objets, de développer le lore du jeu et de favoriser une connexion régulière des joueurs.
+Enfin, en m'appuyant sur l'histoire principale, j'ai proposé la création de tickets scénario qui donnent accès à des scènes secrètes. Ces éléments permettent d'approfondir la narration et d'immerger davantage le joueur dans l'univers du jeu.
+            </p>
+        </div>
     </div>
 </section>
-
-
 
 <!-- BOUTON TÉLÉCHARGER -->
 <section class="hp-download">
     <div class="container">
-        <a href="downloads/gruik-vixen.zip" class="hp-download-btn-download ">Document PDF</a>
+        <a href="downloads/fantasy-life.pdf" class="hp-download-btn-download">
+            <i class="fas fa-download"></i>
+            Document PDF
+        </a>
     </div>
 </section>
 
 <!-- SÉPARATEUR QUADRILLÉ -->
 <section class="hp-grid-separator"></section>
+
+<!-- CONTACT -->
 <section class="contact">
     <div class="container">
-        <h2 class="section-title">Me Contacter</h2>
-        
+        <h2 class="contact-section-title">Me Contacter</h2>
         <div class="contact-content">
             <a href="mailto:meline@email.com" class="contact-link">
                 <div class="contact-icon">
@@ -102,14 +92,12 @@ Enfin, en m’appuyant sur l’histoire principale, j’ai proposé la création
                 </div>
                 <span>meline@email.com</span>
             </a>
-
             <a href="https://linkedin.com/in/meline" target="_blank" class="contact-link">
                 <div class="contact-icon">
                     <i class="fas fa-linkedin"></i>
                 </div>
                 <span>LinkedIn</span>
             </a>
-
             <a href="https://meline.itch.io" target="_blank" class="contact-link">
                 <div class="contact-icon">
                     <i class="fas fa-gamepad"></i>
@@ -117,13 +105,9 @@ Enfin, en m’appuyant sur l’histoire principale, j’ai proposé la création
                 <span>itch.io</span>
             </a>
         </div>
-
-       
-
     </div>
 </section>
-<!-- JS CORRIGÉ -->
-<script src="../js/script.js"></script>
 
+<script src="../js/script.js"></script>
 </body>
 </html>
