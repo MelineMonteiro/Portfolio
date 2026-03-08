@@ -1440,4 +1440,13 @@ footer {
         font-size: 30px;
         top: -35px;
     }
+
+    /* Désactiver les effets hover sur les images principales */
+
+.profile-image img:hover,
+.project-image-wrapper img:hover,
+.hp-image img:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
 }
