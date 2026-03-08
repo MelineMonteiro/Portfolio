@@ -691,15 +691,17 @@ section {
 }
 
 .hp-container {
-    max-width: 1200px;
+   max-width: 900px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 60px;
-    flex-wrap: wrap;
 }
 
 .hp-image {
-    flex: 0 0 35%;
+    flex: none;
+    max-width: 350px;
     max-height: 400px;
     display: flex;
     align-items: center;
@@ -722,7 +724,8 @@ section {
 }
 
 .hp-info {
-    flex: 0 0 55%;
+   flex: none;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
