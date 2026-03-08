@@ -890,12 +890,10 @@ section {
 }
 
 .carousel-image {
-    width: 100%;
+   width: 100%;
     height: auto;
     object-fit: contain;
     display: none;
-    cursor: zoom-in;
-    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .carousel-image:hover {
@@ -905,6 +903,10 @@ section {
 
 .carousel-image.active {
     display: block;
+}
+#carousel-ld {
+    position: relative;
+    width: 100%;
 }
 
 .hp-feature-divider {
