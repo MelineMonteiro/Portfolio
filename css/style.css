@@ -495,6 +495,7 @@ header {
 
 .rainbow-name span:not(.space):hover {
     animation: wave-up 0.5s ease;
+    color: inherit;
 }
 
 @keyframes wave-up {
