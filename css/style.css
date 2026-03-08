@@ -274,10 +274,21 @@ header {
     background-clip: text;
     cursor: pointer;
     transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .logo:hover {
     transform: scale(1.05);
+}
+
+.logo-image {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
 .nav-menu {
@@ -472,7 +483,7 @@ header {
 
 .rainbow-name span {
     color: var(--text-dark);
-    transition: color 0.3s ease, transform 0.3s ease;
+    transition: color 0.3s ease;
     display: inline;
     cursor: pointer;
 }
@@ -483,7 +494,8 @@ header {
 }
 
 .rainbow-name span:not(.space):hover {
-    animation: wave-up 0.5s ease;
+    color: inherit;
+    animation: none;
 }
 
 /* Couleurs rainbow au survol - 21 couleurs */
@@ -508,18 +520,6 @@ header {
 .rainbow-name span:nth-child(19):hover { color: #0000ff; }
 .rainbow-name span:nth-child(20):hover { color: #4b0082; }
 .rainbow-name span:nth-child(21):hover { color: #9400d3; }
-
-@keyframes wave-up {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
 
 /* ===================== */
 /* BOUTONS */
@@ -633,28 +633,28 @@ section {
     width: 100%;
     text-align: left;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 0.6fr 2fr;
     gap: 0;
-    min-height: 60vh;
+    min-height: 40vh;
 }
 
 .about-section-title {
     color: white;
-    font-size: 2.8rem;
+    font-size: 2rem;
     font-weight: 700;
     margin: 0;
-    padding: 50px 50px;
+    padding: 40px 30px;
     background: black;
     writing-mode: horizontal-tb;
     display: flex;
     align-items: center;
-    border-right: 2px solid white;
+    border-right: 1px solid white;
 }
 
 .about-content {
     display: flex;
     align-items: center;
-    padding: 50px 50px;
+    padding: 40px 40px;
 }
 
 .about-decorations {
@@ -720,7 +720,8 @@ section {
     display: block;
     object-fit: cover;
     transition: none;
-    cursor: zoom-in;
+    cursor: default;
+    pointer-events: none;
 }
 
 .project-image-wrapper img:hover {
@@ -815,13 +816,14 @@ section {
     height: auto;
     object-fit: contain;
     display: block;
-    transition: transform 0.3s, box-shadow 0.3s;
-    cursor: zoom-in;
+    transition: none;
+    cursor: default;
+    pointer-events: none;
 }
 
 .hp-image img:hover {
-    transform: scale(1.15);
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+    transform: none !important;
+    box-shadow: none !important;
 }
 
 .hp-info {
@@ -876,6 +878,13 @@ section {
     height: auto !important;
     margin: 30px auto !important;
     display: block !important;
+    cursor: default !important;
+    pointer-events: none !important;
+}
+
+.context-image:hover {
+    transform: none !important;
+    box-shadow: none !important;
 }
 
 /* ===================== */
@@ -1356,12 +1365,12 @@ footer {
 
     .about-section-title {
         border-right: none;
-        border-bottom: 2px solid white;
-        padding: 30px 30px;
+        border-bottom: 1px solid white;
+        padding: 20px 30px;
     }
 
     .about-content {
-        padding: 30px 30px;
+        padding: 20px 30px;
     }
 
     .contact-content {
@@ -1404,6 +1413,16 @@ footer {
     header {
         padding: 15px 20px;
         gap: 20px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+        gap: 8px;
+    }
+
+    .logo-image {
+        width: 1.4rem;
+        height: 1.4rem;
     }
 
     .nav-menu {
@@ -1522,7 +1541,13 @@ footer {
     }
 
     .logo {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        gap: 6px;
+    }
+
+    .logo-image {
+        width: 1.2rem;
+        height: 1.2rem;
     }
 
     .hero-text h1 {
@@ -1580,8 +1605,8 @@ footer {
     }
 
     .about-section-title {
-        font-size: 1.6rem;
-        padding: 20px 20px;
+        font-size: 1.4rem;
+        padding: 15px 15px;
     }
 
     .contact-icon {
