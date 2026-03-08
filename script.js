@@ -29,7 +29,7 @@ document.addEventListener('click', (e) => {
 });
 
 // ===================== */
-/* SMOOTH SCROLL */
+// SMOOTH SCROLL
 // ===================== */
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -57,7 +57,6 @@ if (heroSection && aboutSection) {
         const heroRect = heroSection.getBoundingClientRect();
         const aboutRect = aboutSection.getBoundingClientRect();
         
-        // Si la section À propos commence à apparaître en haut de la page
         if (aboutRect.top <= 0) {
             heroSection.classList.add('hide');
         } else {
@@ -147,18 +146,15 @@ function initCarousel(containerId) {
         });
     }
 
-    // Afficher la première image
     showImage(0);
     console.log('Carousel initialized');
 }
 
-// Initialiser les carousels au chargement
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOMContentLoaded - initializing carousels');
     initCarousel('carousel-ld');
 });
 
-// Initialiser aussi après un petit délai au cas où
 setTimeout(() => {
     const container = document.getElementById('carousel-ld');
     if (container && !container.querySelector('.carousel-image.active')) {
@@ -184,30 +180,25 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observer pour les éléments qui doivent s'animer au scroll
 document.addEventListener('DOMContentLoaded', () => {
-    // Animer les textes à propos au scroll
     const aboutTexts = document.querySelectorAll('.about-text');
     aboutTexts.forEach(el => {
         el.classList.add('scroll-animation');
         observer.observe(el);
     });
 
-    // Animer les cartes de projets au scroll
     const projectCards = document.querySelectorAll('.project-card.featured.clean-layout');
     projectCards.forEach(el => {
         el.classList.add('scroll-animation');
         observer.observe(el);
     });
 
-    // Animer les cartes de projets annexe au scroll
     const gridCards = document.querySelectorAll('.grid-card');
     gridCards.forEach(el => {
         el.classList.add('scroll-animation');
         observer.observe(el);
     });
 
-    // Animer les sections de features
     const featureSections = document.querySelectorAll('.hp-container-feature');
     featureSections.forEach(el => {
         el.classList.add('scroll-animation');
@@ -220,7 +211,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // ===================== */
 
 function createImageModal() {
-    // Créer le modal s'il n'existe pas
     if (document.getElementById('imageModal')) return;
 
     const modal = document.createElement('div');
@@ -251,9 +241,8 @@ function createImageModal() {
 document.addEventListener('DOMContentLoaded', () => {
     const modal = createImageModal();
 
-    // Ajouter le zoom à toutes les images concernées
     const zoomImages = document.querySelectorAll(
-        '.hp-image img, .hp-feature-image img, .carousel-image, .card-image img'
+        '.hp-feature-image img, .carousel-image, .card-image img'
     );
 
     zoomImages.forEach(img => {
