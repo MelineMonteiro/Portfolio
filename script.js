@@ -29,7 +29,7 @@ document.addEventListener('click', (e) => {
 });
 
 // ===================== */
-// SMOOTH SCROLL
+/* SMOOTH SCROLL */
 // ===================== */
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -43,6 +43,43 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
+});
+
+// ===================== */
+// HERO FADE OUT ON SCROLL
+// ===================== */
+
+const heroSection = document.querySelector('.hero');
+const aboutSection = document.querySelector('.about');
+
+if (heroSection && aboutSection) {
+    window.addEventListener('scroll', () => {
+        const heroRect = heroSection.getBoundingClientRect();
+        const aboutRect = aboutSection.getBoundingClientRect();
+        
+        // Si la section À propos commence à apparaître en haut de la page
+        if (aboutRect.top <= 0) {
+            heroSection.classList.add('hide');
+        } else {
+            heroSection.classList.remove('hide');
+        }
+    });
+}
+
+// ===================== */
+// SCROLL INDICATOR - HIDE ON SCROLL
+// ===================== */
+
+const scrollIndicator = document.querySelector('.scroll-indicator');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollIndicator.style.opacity = '0';
+        scrollIndicator.style.pointerEvents = 'none';
+    } else {
+        scrollIndicator.style.opacity = '1';
+        scrollIndicator.style.pointerEvents = 'auto';
+    }
 });
 
 // ===================== */
@@ -230,20 +267,4 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.classList.add('active');
         });
     });
-});
-
-// ===================== */
-// SCROLL INDICATOR - HIDE ON SCROLL
-// ===================== */
-
-const scrollIndicator = document.querySelector('.scroll-indicator');
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        scrollIndicator.style.opacity = '0';
-        scrollIndicator.style.pointerEvents = 'none';
-    } else {
-        scrollIndicator.style.opacity = '1';
-        scrollIndicator.style.pointerEvents = 'auto';
-    }
 });
