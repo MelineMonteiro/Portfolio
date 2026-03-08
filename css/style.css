@@ -934,7 +934,7 @@ section {
     color: var(--text-dark);
     font-size: 0.95rem;
     padding: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+   
     border-radius: 8px;
 }
 
