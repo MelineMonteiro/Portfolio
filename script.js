@@ -1,4 +1,7 @@
-// Menu mobile toggle
+// ===================== */
+// MENU MOBILE TOGGLE
+// ===================== */
+
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -25,7 +28,10 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Smooth scroll pour les liens internes
+// ===================== */
+// SMOOTH SCROLL
+// ===================== */
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -39,10 +45,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-
-
 // ===================== */
-// CAROUSEL POUR LES IMAGES (LEVEL DESIGN) - CORRIGÉ
+// CAROUSEL CORRIGÉ - UNE SEULE IMAGE
 // ===================== */
 
 function initCarousel(containerId) {
@@ -111,7 +115,7 @@ function initCarousel(containerId) {
     console.log('Carousel initialized');
 }
 
-// Initialiser les carousels
+// Initialiser les carousels au chargement
 document.addEventListener('DOMContentLoaded', () => {
     console.log('DOMContentLoaded - initializing carousels');
     initCarousel('carousel-ld');
@@ -212,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Ajouter le zoom à toutes les images concernées
     const zoomImages = document.querySelectorAll(
-        '.hp-image img, .hp-feature-image img, .carousel-image, .card-image img, .project-image-wrapper img'
+        '.hp-image img, .hp-feature-image img, .carousel-image, .card-image img'
     );
 
     zoomImages.forEach(img => {
@@ -226,4 +230,20 @@ document.addEventListener('DOMContentLoaded', () => {
             modal.classList.add('active');
         });
     });
+});
+
+// ===================== */
+// SCROLL INDICATOR - HIDE ON SCROLL
+// ===================== */
+
+const scrollIndicator = document.querySelector('.scroll-indicator');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollIndicator.style.opacity = '0';
+        scrollIndicator.style.pointerEvents = 'none';
+    } else {
+        scrollIndicator.style.opacity = '1';
+        scrollIndicator.style.pointerEvents = 'auto';
+    }
 });
