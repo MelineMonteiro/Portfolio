@@ -509,10 +509,7 @@ header {
     }
 }
 
-.rainbow-name span:not(.space):hover {
-    color: inherit;
-    animation: none;
-}
+
 
 /* Couleurs rainbow au survol - 21 couleurs */
 .rainbow-name span:nth-child(1):hover { color: #ff0000; }
