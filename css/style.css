@@ -494,6 +494,22 @@ header {
 }
 
 .rainbow-name span:not(.space):hover {
+    animation: wave-up 0.5s ease;
+}
+
+@keyframes wave-up {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.rainbow-name span:not(.space):hover {
     color: inherit;
     animation: none;
 }
