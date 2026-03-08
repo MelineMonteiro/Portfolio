@@ -476,43 +476,26 @@ header {
     font-size: clamp(2.5rem, 8vw, 4.5rem);
     font-weight: 800;
     letter-spacing: -1px;
-    line-height: 1.3;
-    word-spacing: normal;
-    white-space: normal;
+    line-height: 1.1;
 }
 
 .rainbow-name span {
     color: var(--text-dark);
-    transition: color 0.3s ease;
-    display: inline;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
     cursor: pointer;
 }
 
 .rainbow-name span.space {
-    width: auto;
-    display: inline;
+    width: 0.3em;
+    display: inline-block;
 }
 
 .rainbow-name span:not(.space):hover {
     animation: wave-up 0.5s ease;
-    color: inherit;
 }
 
-@keyframes wave-up {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-
-
-/* Couleurs rainbow au survol - 21 couleurs */
+/* Couleurs rainbow au survol - 21 couleurs pour couvrir les longs textes */
 .rainbow-name span:nth-child(1):hover { color: #ff0000; }
 .rainbow-name span:nth-child(2):hover { color: #ff7f00; }
 .rainbow-name span:nth-child(3):hover { color: #ffff00; }
@@ -534,6 +517,20 @@ header {
 .rainbow-name span:nth-child(19):hover { color: #0000ff; }
 .rainbow-name span:nth-child(20):hover { color: #4b0082; }
 .rainbow-name span:nth-child(21):hover { color: #9400d3; }
+
+@keyframes wave-up {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
 
 /* ===================== */
 /* BOUTONS */
