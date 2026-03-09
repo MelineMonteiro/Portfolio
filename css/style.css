@@ -653,7 +653,7 @@ section {
 
 .about-section-title {
     color: white;
-    font-size: 2rem;
+    font-size: 7rem;
     font-weight: 700;
     margin: 0;
     padding: 40px 30px;
@@ -695,7 +695,7 @@ section {
 }
 
 .projects-section-title {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(8rem, 5vw, 3rem);
     font-weight: 800;
     text-align: center;
     margin-bottom: 60px;
