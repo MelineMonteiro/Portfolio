@@ -662,6 +662,7 @@ section {
     display: flex;
     align-items: center;
     border-right: 1px solid white;
+    font-family: 'LTCarpet', sans-serif;
 }
 
 .about-content {
@@ -703,6 +704,7 @@ section {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     white-space: nowrap;
+    font-family: 'LTCarpet', sans-serif;
 }
 
 .featured-projects {
@@ -1274,6 +1276,7 @@ section {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    font-family: 'LTCarpet', sans-serif;
 }
 
 .contact-content {
