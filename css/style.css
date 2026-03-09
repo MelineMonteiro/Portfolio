@@ -475,7 +475,7 @@ header {
     display: block;
     font-size: clamp(2.5rem, 8vw, 4.5rem);
     font-weight: 800;
-    letter-spacing: -1px;
+    letter-spacing: 2px;
     line-height: 1.1;
     font-family: 'LTCarpet', sans-serif;
 
