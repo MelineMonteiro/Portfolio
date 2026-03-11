@@ -927,14 +927,11 @@ section {
 
 .hp-realisation-extra {
     max-width: 900px;
-    margin: 40px auto 0;
-    text-align: center;
+    margin: 0 auto;
+    text-align: left;
     line-height: 1.8;
     color: var(--text-dark);
-    font-size: 0.95rem;
-    padding: 30px;
-   
-    border-radius: 8px;
+
 }
 
 /* ===================== */
