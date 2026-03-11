@@ -931,6 +931,9 @@ section {
     text-align: left;
     line-height: 1.8;
     color: var(--text-dark);
+    padding: 15px;
+   
+ 
 
 }
 
