@@ -445,6 +445,12 @@ header {
     line-height: 1.1;
     margin-bottom: 20px;
     letter-spacing: -1px;
+
+ 
+    white-space: normal; /* permet aux mots de passer à la ligne */
+    overflow-wrap: break-word; /* coupe les mots trop longs si nécessaire */
+    word-wrap: break-word; /* support legacy */
+    hyphens: none; /* empêche les traits d’union automatiques */
 }
 
 .subtitle {
