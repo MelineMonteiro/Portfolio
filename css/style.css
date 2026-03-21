@@ -504,19 +504,19 @@ header {
 }
 
 /* Couleurs rainbow au survol - 21 couleurs pour couvrir les longs textes */
-.rainbow-name span:nth-child(1):hover { color: #ff0000; }
-.rainbow-name span:nth-child(2):hover { color: #ff7f00; }
-.rainbow-name span:nth-child(3):hover { color: #ffff00; }
-.rainbow-name span:nth-child(4):hover { color: #00ff00; }
-.rainbow-name span:nth-child(5):hover { color: #0000ff; }
-.rainbow-name span:nth-child(6):hover { color: #4b0082; }
-.rainbow-name span:nth-child(7):hover { color: #9400d3; }
-.rainbow-name span:nth-child(8):hover { color: #ff0000; }
-.rainbow-name span:nth-child(9):hover { color: #ff7f00; }
-.rainbow-name span:nth-child(10):hover { color: #ffff00; }
-.rainbow-name span:nth-child(11):hover { color: #00ff00; }
-.rainbow-name span:nth-child(12):hover { color: #0000ff; }
-.rainbow-name span:nth-child(13):hover { color: #4b0082; }
+.rainbow-name span:nth-child(1):hover { color: #f94144; }
+.rainbow-name span:nth-child(2):hover { color: #f3722c; }
+.rainbow-name span:nth-child(3):hover { color: #f8961e; }
+.rainbow-name span:nth-child(4):hover { color: #f9c74f; }
+.rainbow-name span:nth-child(5):hover { color: #90be6d; }
+.rainbow-name span:nth-child(6):hover { color: #43aa8b; }
+.rainbow-name span:nth-child(7):hover { color: #577590; }
+.rainbow-name span:nth-child(8):hover { color: #f94144; }
+.rainbow-name span:nth-child(9):hover { color: #f3722c; }
+.rainbow-name span:nth-child(10):hover { color: #f8961e; }
+.rainbow-name span:nth-child(11):hover { color: #f9c74f; }
+.rainbow-name span:nth-child(12):hover { color: #90be6d; }
+.rainbow-name span:nth-child(13):hover { color: #43aa8b; }
 .rainbow-name span:nth-child(14):hover { color: #9400d3; }
 .rainbow-name span:nth-child(15):hover { color: #ff0000; }
 .rainbow-name span:nth-child(16):hover { color: #ff7f00; }
