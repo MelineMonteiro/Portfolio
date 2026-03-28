@@ -1224,6 +1224,7 @@ section {
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s;
+       border-radius: 8px;
 }
 
 .grid-card:hover .card-overlay {
