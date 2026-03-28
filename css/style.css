@@ -277,10 +277,12 @@ header {
     display: flex;
     align-items: center;
     gap: 12px;
+     font-family: 'LTCarpet', sans-serif;
 }
 
 .logo:hover {
     transform: scale(1.05);
+    
 }
 
 .logo-image {
