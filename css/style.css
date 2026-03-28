@@ -1004,7 +1004,7 @@ section {
     max-width: 400px; /* ajuste selon ton design */
     width: 100%;
     height: auto;
-    border-radius: 10px; /* optionnel */
+    border-radius: 0px; /* optionnel */
 }
 
 /* ===================== */
