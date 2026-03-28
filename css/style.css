@@ -991,6 +991,22 @@ section {
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
 }
 
+.hp-extra-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* espace entre les images */
+    margin-top: 20px;
+    flex-wrap: wrap; /* pour mobile */
+}
+
+.hp-extra-images img {
+    max-width: 300px; /* ajuste selon ton design */
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* optionnel */
+}
+
 /* ===================== */
 /* CAROUSEL */
 /* ===================== */
