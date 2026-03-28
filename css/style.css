@@ -1119,6 +1119,7 @@ section {
     background: #333;
     color: white;
     gap: 15px;
+     border-radius: 8xp;
 }
 
 .hp-download-btn-download i {
