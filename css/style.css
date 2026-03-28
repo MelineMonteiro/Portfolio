@@ -281,7 +281,7 @@ header {
 }
 
 .logo:hover {
-    transform: scale(1.05);
+    transform: none;
     
 }
 
