@@ -1098,7 +1098,7 @@ section {
     background: white;
     text-align: center;
     padding: 60px 20px;
-    border-radius: 8xp;
+   
 }
 
 .hp-download-btn-download {
@@ -1110,7 +1110,7 @@ section {
     padding: 20px 40px;
     font-weight: 650;
     text-decoration: none;
-    border-radius: 8xp;
+    border-radius: 8px;
     transition: all 0.3s;
     font-size: 1rem;
     border: none;
@@ -1121,7 +1121,7 @@ section {
     background: #333;
     color: white;
     gap: 15px;
-     border-radius: 8xp;
+    
 }
 
 .hp-download-btn-download i {
