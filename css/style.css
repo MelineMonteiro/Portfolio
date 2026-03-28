@@ -1001,7 +1001,7 @@ section {
 }
 
 .hp-extra-images img {
-    max-width: 300px; /* ajuste selon ton design */
+    max-width: 400px; /* ajuste selon ton design */
     width: 100%;
     height: auto;
     border-radius: 10px; /* optionnel */
