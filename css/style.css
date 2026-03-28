@@ -1190,6 +1190,7 @@ section {
     padding: 12px;
     box-sizing: border-box;
     overflow: visible;
+    border-radius: 8px;
 }
 
 .card-image img {
