@@ -1096,6 +1096,7 @@ section {
     background: white;
     text-align: center;
     padding: 60px 20px;
+    border-radius: 8xp;
 }
 
 .hp-download-btn-download {
@@ -1200,6 +1201,7 @@ section {
     display: block;
     cursor: zoom-in;
     transition: transform 0.3s, box-shadow 0.3s;
+     border-radius: 8px;
 }
 
 .card-image img:hover {
