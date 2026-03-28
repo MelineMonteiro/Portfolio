@@ -1107,7 +1107,7 @@ section {
     padding: 20px 40px;
     font-weight: 650;
     text-decoration: none;
-    border-radius: 0;
+    border-radius: 8xp;
     transition: all 0.3s;
     font-size: 1rem;
     border: none;
