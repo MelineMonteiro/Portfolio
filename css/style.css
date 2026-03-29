@@ -1022,19 +1022,24 @@ section {
 }
 
 .hp-extra-images {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* espace entre les images */
-    margin-top: 20px;
-    flex-wrap: wrap; /* pour mobile */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 20px auto 0 auto;
 }
 
 .hp-extra-images img {
-    max-width: 500px; /* ajuste selon ton design */
+   /* max-width: 500px; /* ajuste selon ton design */
     width: 100%;
     height: auto;
     border-radius: 0px; /* optionnel */
+}
+
+.hp-extra-images img:last-child {
+    grid-column: 1 / -1;
+    max-width: 50%;
+    margin: 0 auto;
 }
 
 /* ===================== */
