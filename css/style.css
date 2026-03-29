@@ -816,26 +816,23 @@ section {
 }
 
 .hp-container {
-    max-width: 900px;
+     max-width: 900px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 60px;
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
+    flex-direction: row;
 }
 
 .hp-image {
     flex: none;
-    max-width: 250px;
+    max-width: 250px; 
     max-height: 300px;
     display: flex;
     align-items: center;
     position: relative;
     overflow: visible;
-    max-width: 80%;
 }
 
 .hp-image img {
@@ -843,11 +840,8 @@ section {
     height: auto;
     object-fit: contain;
     display: block;
-    transition: none;
     cursor: default;
     pointer-events: none;
-    width: 100%;
-    height: auto;
 }
 
 .hp-image img:hover {
@@ -1583,6 +1577,16 @@ footer {
 
     .scroll-text {
         display: none;
+    }
+
+    .hp-container {
+        flex-direction: column; 
+        gap: 30px;
+        text-align: center;
+    }
+
+    .hp-image {
+        max-width: 80%; 
     }
 }
 
