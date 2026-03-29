@@ -822,6 +822,9 @@ section {
     align-items: center;
     justify-content: center;
     gap: 60px;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
 }
 
 .hp-image {
@@ -832,6 +835,7 @@ section {
     align-items: center;
     position: relative;
     overflow: visible;
+    max-width: 80%;
 }
 
 .hp-image img {
@@ -842,6 +846,8 @@ section {
     transition: none;
     cursor: default;
     pointer-events: none;
+    width: 100%;
+    height: auto;
 }
 
 .hp-image img:hover {
