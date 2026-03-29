@@ -1036,7 +1036,7 @@ section {
     border-radius: 0px; /* optionnel */
 }
 
-.hp-extra-images img:last-child {
+.hp-extra-images img:last-child(3) {
     grid-column: 1 / -1;
     max-width: 50%;
     margin: 0 auto;
