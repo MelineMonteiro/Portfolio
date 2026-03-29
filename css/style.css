@@ -50,6 +50,19 @@ body {
     padding: 0 20px;
 }
 
+
+.project-video {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 12px;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
 /* ===================== */
 /* IMAGE MODAL ZOOM */
 /* ===================== */
