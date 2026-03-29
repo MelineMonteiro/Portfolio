@@ -829,8 +829,8 @@ section {
 
 .hp-image {
     flex: none;
-    max-width: 350px;
-    max-height: 400px;
+    max-width: 250px;
+    max-height: 300px;
     display: flex;
     align-items: center;
     position: relative;
