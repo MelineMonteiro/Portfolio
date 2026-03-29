@@ -1488,6 +1488,11 @@ footer {
     header {
         padding: 15px 20px;
         gap: 20px;
+  
+    }
+          .hp-image {
+        max-width: 150px;
+        max-height: 200px;
     }
 
     .logo {
@@ -1623,6 +1628,10 @@ footer {
 @media (max-width: 480px) {
     header {
         padding: 12px 15px;
+    }
+    .hp-image {
+        max-width: 120px;
+        max-height: 160px;
     }
 
     .logo {
