@@ -557,6 +557,17 @@ hyphens: none;
     100% {
         transform: translateY(0);
     }
+
+
+    .rainbow-name .word {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.rainbow-name .space {
+    display: inline;
+    width: 0.3em;
+}
 }
 
 
