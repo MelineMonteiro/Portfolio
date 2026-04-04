@@ -525,27 +525,27 @@ hyphens: none;
 }
 
 /* Couleurs rainbow au survol - 21 couleurs pour couvrir les longs textes */
-.rainbow-name span:nth-child(1):hover { color: #f29e4c; }
-.rainbow-name span:nth-child(2):hover { color: #f1c453; }
-.rainbow-name span:nth-child(3):hover { color: #efea5a; }
-.rainbow-name span:nth-child(4):hover { color: #b9e769; }
-.rainbow-name span:nth-child(5):hover { color: #83e377; }
-.rainbow-name span:nth-child(6):hover { color: #16db93; }
-.rainbow-name span:nth-child(7):hover { color: #0db39e; }
-.rainbow-name span:nth-child(8):hover { color: #048ba8; }
-.rainbow-name span:nth-child(9):hover { color: #2c699a; }
-.rainbow-name span:nth-child(10):hover { color: #54478c; }
-.rainbow-name span:nth-child(11):hover { color: #f29e4c; }
-.rainbow-name span:nth-child(12):hover { color: #f1c453; }
-.rainbow-name span:nth-child(13):hover { color: #efea5a; }
-.rainbow-name span:nth-child(14):hover { color: #b9e769; }
-.rainbow-name span:nth-child(15):hover { color: #83e377; }
-.rainbow-name span:nth-child(16):hover { color: #16db93; }
-.rainbow-name span:nth-child(17):hover { color: #0db39e; }
-.rainbow-name span:nth-child(18):hover { color: #048ba8; }
-.rainbow-name span:nth-child(19):hover { color: #2c699a; }
-.rainbow-name span:nth-child(20):hover { color: #54478c; }
-.rainbow-name span:nth-child(21):hover { color: #f29e4c; }
+.rainbow-name span:nth-child(1):hover { color: #e9ff70; }
+.rainbow-name span:nth-child(2):hover { color: #ffd670; }
+.rainbow-name span:nth-child(3):hover { color: #ff9770; }
+.rainbow-name span:nth-child(4):hover { color: #ff70a6; }
+.rainbow-name span:nth-child(5):hover { color: #70d6ff; }
+.rainbow-name span:nth-child(6):hover { color: #e9ff70; }
+.rainbow-name span:nth-child(7):hover { color: #ffd670; }
+.rainbow-name span:nth-child(8):hover { color: #ff9770; }
+.rainbow-name span:nth-child(9):hover { color: #ff70a6; }
+.rainbow-name span:nth-child(10):hover { color: #70d6ff; }
+.rainbow-name span:nth-child(11):hover { color: #e9ff70; }
+.rainbow-name span:nth-child(12):hover { color: #ffd670; }
+.rainbow-name span:nth-child(13):hover { color: #ff9770; }
+.rainbow-name span:nth-child(14):hover { color: #ff70a6; }
+.rainbow-name span:nth-child(15):hover { color: #70d6ff; }
+.rainbow-name span:nth-child(16):hover { color: #e9ff70; }
+.rainbow-name span:nth-child(17):hover { color: #ffd670; }
+.rainbow-name span:nth-child(18):hover { color: #ff9770; }
+.rainbow-name span:nth-child(19):hover { color: #ff70a6; }
+.rainbow-name span:nth-child(20):hover { color: #70d6ff; }
+.rainbow-name span:nth-child(21):hover { color: #e9ff70; }
 
 @keyframes wave-up {
     0% {
