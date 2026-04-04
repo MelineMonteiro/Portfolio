@@ -547,6 +547,31 @@ hyphens: none;
 .rainbow-name span:nth-child(20):hover { color: #70d6ff; }
 .rainbow-name span:nth-child(21):hover { color: #e9ff70; }
 
+
+.rainbow-title span {
+    color: var(--text-dark);
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.rainbow-title span:not(.space):hover {
+    animation: wave-up 0.5s ease;
+}
+
+.rainbow-title span:nth-child(1):hover { color: #e9ff70; }
+.rainbow-title span:nth-child(2):hover { color: #ffd670; }
+.rainbow-title span:nth-child(3):hover { color: #ff9770; }
+.rainbow-title span:nth-child(4):hover { color: #ff70a6; }
+.rainbow-title span:nth-child(5):hover { color: #70d6ff; }
+.rainbow-title span:nth-child(6):hover { color: #e9ff70; }
+.rainbow-title span:nth-child(7):hover { color: #ffd670; }
+.rainbow-title span:nth-child(8):hover { color: #ff9770; }
+.rainbow-title span:nth-child(9):hover { color: #ff70a6; }
+.rainbow-title span:nth-child(10):hover { color: #70d6ff; }
+.rainbow-title span:nth-child(11):hover { color: #e9ff70; }
+.rainbow-title span:nth-child(12):hover { color: #ffd670; }
+
 @keyframes wave-up {
     0% {
         transform: translateY(0);
