@@ -549,7 +549,7 @@ hyphens: none;
 
 
 .rainbow-title span {
-    color: var(--text-dark);
+    
     transition: color 0.3s ease, transform 0.3s ease;
     display: inline-block;
     cursor: pointer;
