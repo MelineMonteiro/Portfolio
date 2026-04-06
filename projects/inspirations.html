@@ -1,1 +1,373 @@
+Voilà le fichier HTML complet :
+html<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inspirations – Méline Monteiro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        body {
+            background: black;
+            color: white;
+        }
 
+        .page-hero {
+            padding: 80px 20px 60px;
+            text-align: center;
+        }
+
+        .inspirations-title {
+            font-size: clamp(6rem, 10vw, 9rem);
+            font-weight: 800;
+            font-family: 'LTCarpet', sans-serif;
+            color: white;
+            white-space: nowrap;
+            display: inline-block;
+            letter-spacing: 2px;
+        }
+
+        .inspirations-title span {
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .inspirations-title span:not(.space):hover {
+            animation: wave-up 0.5s ease;
+        }
+
+        .inspirations-title span:nth-child(1):hover  { color: #e9ff70; }
+        .inspirations-title span:nth-child(2):hover  { color: #ffd670; }
+        .inspirations-title span:nth-child(3):hover  { color: #ff9770; }
+        .inspirations-title span:nth-child(4):hover  { color: #ff70a6; }
+        .inspirations-title span:nth-child(5):hover  { color: #70d6ff; }
+        .inspirations-title span:nth-child(6):hover  { color: #e9ff70; }
+        .inspirations-title span:nth-child(7):hover  { color: #ffd670; }
+        .inspirations-title span:nth-child(8):hover  { color: #ff9770; }
+        .inspirations-title span:nth-child(9):hover  { color: #ff70a6; }
+        .inspirations-title span:nth-child(10):hover { color: #70d6ff; }
+        .inspirations-title span:nth-child(11):hover { color: #e9ff70; }
+        .inspirations-title span:nth-child(12):hover { color: #ffd670; }
+
+        @keyframes wave-up {
+            0%   { transform: translateY(0); }
+            50%  { transform: translateY(-15px); }
+            100% { transform: translateY(0); }
+        }
+
+        .inspirations-section {
+            padding: 40px 60px 100px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .inspirations-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px 30px;
+        }
+
+        .inspiration-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 14px;
+            cursor: pointer;
+        }
+
+        .inspiration-img-wrapper {
+            width: 100%;
+            aspect-ratio: 2 / 3;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            position: relative;
+        }
+
+        .inspiration-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+            filter: grayscale(20%);
+        }
+
+        .inspiration-item:hover .inspiration-img-wrapper img {
+            transform: scale(1.06);
+            filter: grayscale(0%);
+        }
+
+        .inspiration-img-wrapper::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .inspiration-label {
+            font-family: 'LTCarpet', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            text-align: center;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .inspiration-item:hover .inspiration-label {
+            color: #ffd670;
+        }
+
+        .image-modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            inset: 0;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(6px);
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .modal-close:hover {
+            transform: rotate(90deg);
+        }
+
+        @media (max-width: 480px) {
+            .inspirations-section {
+                padding: 30px 20px 60px;
+            }
+            .inspirations-grid {
+                gap: 15px 10px;
+            }
+            .inspiration-label {
+                font-size: 0.75rem;
+            }
+            .inspirations-title {
+                white-space: normal;
+                font-size: clamp(3rem, 10vw, 6rem);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <a href="../index.html" class="logo">
+        <img src="https://raw.githubusercontent.com/MelineMonteiro/Portfolio/main/Images/Soleil.png" alt="Logo" class="logo-image">
+        <span>Méline Monteiro</span>
+    </a>
+    <nav class="nav-menu" id="navMenu">
+        <a href="../index.html#home">Accueil</a>
+        <a href="../index.html#projects">Projets</a>
+        <a href="../index.html#about">À propos</a>
+        <a href="../index.html#contact">Contact</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle">
+        <span></span><span></span><span></span>
+    </button>
+</header>
+
+<!-- TITRE -->
+<div class="page-hero">
+    <h1 class="inspirations-title">
+        <span>I</span><span>n</span><span>s</span><span>p</span><span>i</span><span>r</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span>
+    </h1>
+</div>
+
+<!-- GRILLE -->
+<section class="inspirations-section">
+    <div class="inspirations-grid">
+
+        <div class="inspiration-item">
+            <div class="inspiration-img-wrapper">
+                <img src="Images/inspirations/claude-ponti.jpg" alt="Claude Ponti">
+            </div>
+            <span class="inspiration-label">Claude Ponti</span>
+        </div>
+
+        <div class="inspiration-item">
+            <div class="inspiration-img-wrapper">
+                <img src="Images/inspirations/klimt.jpg" alt="Klimt">
+            </div>
+            <span class="inspiration-label">Gustav Klimt</span>
+        </div>
+
+        <div class="inspiration-item">
+            <div class="inspiration-img-wrapper">
+                <img src="Images/inspirations/monet.jpg" alt="Monet">
+            </div>
+            <span class="inspiration-label">Claude Monet</span>
+        </div>
+
+        <div class="inspiration-item">
+            <div class="inspiration-img-wrapper">
+                <img src="Images/inspirations/vampire-hunter-d.jpg" alt="Vampire Hunter D">
+            </div>
+            <span class="inspiration-label">Vampire Hunter D</span>
+        </div>
+
+        <div class="inspiration-item">
+            <div class="inspiration-img-wrapper">
+                <img src="Images/inspirations/detective-conan.jpg" alt="Detective Conan">
+            </div>
+            <span class="inspiration-label">Détective Conan</span>
+        </div>
+
+        <div class="inspiration-item">
+            <div class="inspiration-img-wrapper">
+                <img src="Images/inspirations/hunter-hunter.jpg" alt="Hunter x Hunter">
+            </div>
+            <span class="inspiration-label">Hunter × Hunter</span>
+        </div>
+
+        <div class="inspiration-item">
+            <div class="inspiration-img-wrapper">
+                <img src="Images/inspirations/little-nightmares.jpg" alt="Little Nightmares">
+            </div>
+            <span class="inspiration-label">Little Nightmares</span>
+        </div>
+
+        <div class="inspiration-item">
+            <div class="inspiration-img-wrapper">
+                <img src="Images/inspirations/machinarium.jpg" alt="Machinarium">
+            </div>
+            <span class="inspiration-label">Machinarium</span>
+        </div>
+
+        <div class="inspiration-item">
+            <div class="inspiration-img-wrapper">
+                <img src="Images/inspirations/cuphead.jpg" alt="Cuphead">
+            </div>
+            <span class="inspiration-label">Cuphead</span>
+        </div>
+
+        <div class="inspiration-item">
+            <div class="inspiration-img-wrapper">
+                <img src="Images/inspirations/resident-evil.jpg" alt="Resident Evil">
+            </div>
+            <span class="inspiration-label">Resident Evil</span>
+        </div>
+
+        <div class="inspiration-item">
+            <div class="inspiration-img-wrapper">
+                <img src="Images/inspirations/until-dawn.jpg" alt="Until Dawn">
+            </div>
+            <span class="inspiration-label">Until Dawn</span>
+        </div>
+
+        <div class="inspiration-item">
+            <div class="inspiration-img-wrapper">
+                <img src="Images/inspirations/blacksad.jpg" alt="Blacksad">
+            </div>
+            <span class="inspiration-label">Blacksad</span>
+        </div>
+
+        <div class="inspiration-item">
+            <div class="inspiration-img-wrapper">
+                <img src="Images/inspirations/complaintes-landes-perdues.jpg" alt="Les Complaintes des Landes Perdues">
+            </div>
+            <span class="inspiration-label">Les Complaintes des Landes Perdues</span>
+        </div>
+
+        <div class="inspiration-item">
+            <div class="inspiration-img-wrapper">
+                <img src="Images/inspirations/passagers-du-vent.jpg" alt="Les Passagers du Vent">
+            </div>
+            <span class="inspiration-label">Les Passagers du Vent</span>
+        </div>
+
+        <div class="inspiration-item">
+            <div class="inspiration-img-wrapper">
+                <img src="Images/inspirations/michel-ocelot.jpg" alt="Michel Ocelot">
+            </div>
+            <span class="inspiration-label">Michel Ocelot</span>
+        </div>
+
+        <div class="inspiration-item">
+            <div class="inspiration-img-wrapper">
+                <img src="Images/inspirations/love-death-robots.jpg" alt="Love Death and Robots">
+            </div>
+            <span class="inspiration-label">Love, Death &amp; Robots</span>
+        </div>
+
+        <div class="inspiration-item">
+            <div class="inspiration-img-wrapper">
+                <img src="Images/inspirations/giger.jpg" alt="H.R. Giger">
+            </div>
+            <span class="inspiration-label">H.R. Giger</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- MODAL -->
+<div class="image-modal" id="imageModal">
+    <div class="modal-content">
+        <span class="modal-close" id="modalClose">&times;</span>
+        <img id="modalImg" src="" alt="">
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Méline Monteiro. Tous droits réservés.</p>
+</footer>
+
+<script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navMenu');
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        toggle.classList.toggle('active');
+    });
+
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+    const modalClose = document.getElementById('modalClose');
+
+    document.querySelectorAll('.inspiration-img-wrapper img').forEach(img => {
+        img.style.cursor = 'zoom-in';
+        img.addEventListener('click', () => {
+            modalImg.src = img.src;
+            modal.classList.add('active');
+        });
+    });
+
+    modalClose.addEventListener('click', () => modal.classList.remove('active'));
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) modal.classList.remove('active');
+    });
+</script>
+
+</body>
+</html>
