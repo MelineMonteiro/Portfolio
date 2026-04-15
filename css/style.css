@@ -645,6 +645,7 @@ hyphens: none;
 }
 
 .btn-primary:hover {
+    background: linear-gradient(135deg, #ff70a6, #ff9770);
     transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5);
 }
@@ -657,11 +658,21 @@ hyphens: none;
 }
 
 .btn-secondary:hover {
-    background: var(--primary);
+    background: linear-gradient(135deg, #ff70a6, #ffd670);
+    
     color: white;
     transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(99, 102, 241, 0.3);
 }
+
+/* Active (clic) */
+.btn-primary:active,
+.project-btn:active,
+.hp-download-btn-download:active {
+    background: linear-gradient(135deg, #ffd670, #e9ff70);
+    color: #1f2937;
+    transform: translateY(0);
+    }
 
 /* ===================== */
 /* SECTIONS */
@@ -927,8 +938,13 @@ section {
 }
 
 .project-btn:hover {
-    background: #333;
+    background: linear-gradient(135deg, #ff70a6, #ffd670);
     gap: 8px;
+}
+
+    .card-link {
+    border-color: white;
+    color: white;
 }
 
 /* ===================== */
@@ -1270,7 +1286,7 @@ section {
 }
 
 .hp-download-btn-download:hover {
-    background: #333;
+     background: linear-gradient(135deg, #ff9770, #ff70a6);
     color: white;
     gap: 15px;
     
@@ -1481,7 +1497,7 @@ section {
 }
 
 .contact-link:hover .contact-icon {
-    background: black;
+     background: linear-gradient(135deg, #ff70a6, #70d6ff);
     color: white;
     transform: translateX(5px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.15);
