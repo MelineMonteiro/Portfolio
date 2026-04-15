@@ -326,12 +326,14 @@ header {
     left: 0;
     width: 0;
     height: 2px;
-    background: white;
+    background: linear-gradient(135deg, #ff70a6, #ffd670);
+    
     transition: var(--transition);
 }
 
 .nav-menu a:hover::after {
     width: 100%;
+    background: linear-gradient(135deg, #ff70a6, #ffd670);
 }
 
 .menu-toggle {
